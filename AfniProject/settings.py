@@ -70,7 +70,9 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'myblog.wsgi.application'
+
+
+WSGI_APPLICATION = 'afskin.wsgi.application'
 
 
 # Database
