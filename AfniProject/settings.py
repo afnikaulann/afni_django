@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'afskin.urls'
+ROOT_URLCONF = 'AfniProject.urls'
 
 TEMPLATES = [
     {
@@ -72,7 +72,7 @@ TEMPLATES = [
 
 
 
-WSGI_APPLICATION = 'afskin.wsgi.application'
+WSGI_APPLICATION = 'AfniProject.wsgi.application'
 
 
 # Database
