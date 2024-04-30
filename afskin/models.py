@@ -1,49 +1,27 @@
 # blog/models.py
 
+from django.contrib.auth.models import User
 from django.db import models
-from django.utils import timezone
-from django.utils.text import slugify
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
-class Category(models.Model):
-    slug = models.SlugField(unique=True)
-    category = models.CharField(max_length=100)
- 
-    def __str__(self):
-        return self.category
+# Create your models here.
 
-class Page(models.Model):
-    title = models.CharField(max_length=100)
-    content = models.TextField()
-    image = models.ImageField(upload_to='page_images/')
-    slug = models.SlugField(unique=True, max_length=255)
-    is_published = models.BooleanField(default=False)
+class UserDetail(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    title = models.CharField(blank=True, null=True, max_length=50, verbose_name='Ünvan')
+    description = models.CharField(blank=True, null=True, max_length=250, verbose_name='Açıklama')
+    image = models.ImageField(blank=True, null=True, upload_to='afskin/', default='def_user.png', verbose_name='Görsel')
 
-    def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.title)
-        super().save(*args, **kwargs)
+     # We will define the signals so that our profile model is created automatically when the User instance is created.
+    @receiver(post_save, sender=User)
+    def create_user_profile(sender, instance, created, **kwargs):
+        if created:
+            UserDetail.objects.create(user=instance)
 
-    def __str__(self):
-        return self.title
-
-class Blog(models.Model):
-    title = models.CharField(max_length=200)
-    slug = models.SlugField(unique=True)
-    author = models.CharField(max_length=100)
-    content = models.TextField()
-    image = models.ImageField(upload_to='post_images/')
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    description = models.TextField()
-    status = models.IntegerField(choices=[
-        (0, 'Draft'),
-        (1, 'Published'),
-    ], default=0)
-    created_date = models.DateTimeField(default=timezone.now)
-    published_date = models.DateTimeField(blank=True, null=True)
-
-    def publish(self):
-        self.published_date = timezone.now()
-        self.save()
+    @receiver(post_save, sender=User)
+    def save_user_profile(sender, instance, **kwargs):
+        instance.userdetail.save()
 
     def __str__(self):
-        return self.title
+        return self.afskin.username

@@ -2,12 +2,15 @@
 
 from django.urls import path
 from . import views
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('categories/', views.category_list, name='category_list'),
-    path('posts/', views.post_list, name='post_list'),
-    path('pages/', views.page_list, name='page_list'),
-    path('post/<slug:slug>/', views.post_detail, name='post_detail'),
-    path('page/<slug:slug>/', views.page_detail, name='page_detail'),
+     path('register/', views.registerView, name='register'),
+    path('login/', views.loginView, name='login'),
+    path('logout/', views.logoutView, name='logout'),
+    path('profile/detail', views.ProfileDetailView.as_view(), name='viewProfile'),
+    path('profile/update', views.ProfileUpdateView.as_view(), name='updateProfile'),
+    path('change-password', views.PasswordsChangeView.as_view(template_name='change-password.html'), name='changePassword'),
+    path('all/', views.AuthorIndexView.as_view(), name='authors'),
+    path('detail/<int:pk>', views.AuthorDetailView.as_view(), name='authorDetail'),
 ]
