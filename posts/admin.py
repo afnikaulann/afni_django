@@ -13,6 +13,13 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = ['name']
 
 
+@admin.register(Tag)
+class TagAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug': ['name']}
+    list_display = ['name', 'slug']
+    search_fields = ['name']
+
+
 @admin.register(HitCount)
 class HitCountAdmin(admin.ModelAdmin):
     list_display = ['ip']
@@ -34,3 +41,4 @@ class CommentAdmin(admin.ModelAdmin):
     list_display_links = ['post', 'author']
     list_filter = ['post', 'author', 'created', 'available']
     search_fields = ['post', 'author', 'content']
+

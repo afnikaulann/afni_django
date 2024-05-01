@@ -4,6 +4,8 @@ from django.urls import path
 from . import views
 from django.contrib.auth import views as auth_views
 
+app_name = 'afskin'
+
 urlpatterns = [
      path('register/', views.registerView, name='register'),
     path('login/', views.loginView, name='login'),
