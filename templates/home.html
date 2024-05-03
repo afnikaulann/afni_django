@@ -4,20 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - AFSKIN</title>
-    <!-- Your CSS styles -->
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-image: url('skincare_background.jpg'); /* Background image */
             background-size: cover;
             background-color: #eeb9d7;
             color: #333; /* Dark text color for better contrast */
         }
         .header {
             background-color: #de7bb3; /* Pink background */
-            padding: 20px 0;
+            padding: 20px 50px;
             text-align: center;
         }
         .container {
@@ -44,7 +42,10 @@
             font-size: 20px; /* Increase font size */
         }
         .navigation a:hover {
-            color: #a7a7a7; /* Lighter pink on hover */
+            color: #ffffff; /* Lighter pink on hover */
+        }
+        .navigation a.active {
+            color: #ffffff; /* Change color for active menu item */
         }
         .title {
             text-align: center;
@@ -63,7 +64,7 @@
             }
         }
         .title h1 {
-            font-family: 'Pacifico', Arial, sans-serif; /* Set font family */
+            font-family: 'Verdana', sans-serif; /* Set font family */
             color:  #ffffff; /* Pink color */
         }
         .content {
@@ -73,11 +74,50 @@
             max-width: 1000px; /* Limit width */
             margin: 10px auto 60px; /* Center content and adjust margin */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+            text-align: justify; /* Ratakan teks kanan-kiri */
+            display: flex;
+            justify-content: space-between;
         }
-        .content p {
-            font-size: 20px;
-            line-height: 1.6;
-            margin-bottom: 20px; /* Adjust margin bottom */
+        .content-inner {
+            flex: 1;
+        }
+        .calculator {
+            flex: 1;
+            padding-left: 30px;
+        }
+        .calculator h3 {
+            color: #de7bb3;
+        }
+        .calculator p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .calculator form {
+            margin-top: 20px;
+        }
+        .calculator label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .calculator select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .calculator button {
+            background-color: #de7bb3;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .calculator button:hover {
+            background-color: #c6609e;
         }
         .article-container {
             display: grid;
@@ -141,7 +181,7 @@
             transform: translateY(-50%);
             padding: 10px;
             border: none;
-            background-color: #de7bb3;
+            background-color: #c7b1be;
             color: #fff;
             border-radius: 5px;
             cursor: pointer;
@@ -156,8 +196,9 @@
     <div class="header">
         <div class="container">
             <a href="#" class="logo">LOGO</a>
+            <!-- Navbar -->
             <nav class="navigation">
-                <a href="#">Home</a>
+                <a href="#" class="active">Home</a>
                 <a href="#">Blog</a>
                 <a href="#">About</a>
                 <a href="#">Product</a>
@@ -174,16 +215,35 @@
         <h1 style="font-size: 60px;">WELCOME TO AFSKIN</h1>
     </div>
     <div class="content">
-        <h2 style="color: #de7bb3;">HALO!!</h2>
-        <p style="color: #666;">Kami menyediakan informasi terbaru dan terpercaya mengenai perawatan kulit dan produk-produk skincare yang dapat membantu Anda merawat kulit dengan optimal. Dengan tips dan panduan yang kami berikan, Anda dapat mencapai kulit yang sehat dan bersinar setiap hari.</p>
+        <div class="content-inner">
+            <h2 style="color: #de7bb3;">HALO!!</h2>
+            <p style="color: #666;">AFSKIN hadir untuk memberikan tips dan trik skincare yang bermanfaat. Kami menyajikan informasi yang jelas dan mudah dipahami, sehingga Anda bisa merawat kulit dengan lebih baik dan percaya diri. 
+                Yuk, bergabung dengan kami untuk meraih kulit sehat dan bersinar setiap hari!</p>
+        </div>
+        <div class="calculator">
+            <h3>Kenali Kulitmu dengan Lebih Baik!  </h3>
+            <p>Masukkan jenis perawatan kulit Anda dan temukan produk yang cocok untuk Anda!</p>
+            <form>
+                <label for="skinType">Jenis Kulit:</label>
+                <select name="skinType" id="skinType">
+                    <option value="normal">Normal</option>
+                    <option value="dry">Kering</option>
+                    <option value="oily">Berminyak</option>
+                    <option value="combination">Kombinasi</option>
+                </select>
+                <button type="submit">Cari Produk</button>
+            </form>
+        </div>
     </div>
     <div class="article-container">
         <div class="article">
+            <img src="nama_gambar1.jpg" alt="Tips Perawatan Kulit Sehari-hari">
             <h3>Artikel 1: Tips Perawatan Kulit Sehari-hari</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at augue sit amet justo euismod consequat. Duis dictum mauris nec nisi scelerisque, sed fermentum nisl tempus.</p>
             <a href="#">Baca Selengkapnya</a>
         </div>
         <div class="article">
+            <img src="nama_gambar2.jpg" alt="Produk Skincare Terbaru">
             <h3>Artikel 2: Produk Skincare Terbaru</h3>
             <p>Nulla facilisi. Fusce ac urna sed nisi fermentum lobortis. Vivamus sodales commodo purus, a ultrices velit dignissim vel.</p>
             <a href="#">Baca Selengkapnya</a>
