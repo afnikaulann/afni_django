@@ -1,37 +1,95 @@
-<!-- templates/home.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Our Blog</title>
+    <title>Home - AFSKIN</title>
+    <!-- Your CSS styles -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('skincare_background.jpg'); /* Background image */
+            background-size: cover;
+            color: #fff; /* White text color for better contrast */
+        }
+        .header {
+            background-color: #ff51b1; /* Pink background */
+            padding: 20px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navigation {
+            display: flex;
+            gap: 50px;
+        }
+        .navigation a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 20px; /* Increase font size */
+        }
+        .navigation a:hover {
+            color: #ffc5e4; /* Lighter pink on hover */
+        }
+        .title {
+            text-align: center;
+            font-size: 50px;
+            color: #fff; /* White text color */
+            margin: 10px auto 20px; /* Adjust margin */
+        }
+        .title h1 {
+            font-family: 'Pacifico', Arial, sans-serif; /* Set font family */
+            color: #ff51b1; /* Pink color */
+        }
+        .content {
+            padding: 50px; /* Add padding for better readability */
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            border-radius: 100px; /* Rounded corners */
+            max-width: 1000px; /* Limit width */
+            margin: 20px auto 60px; /* Center content and adjust margin */
+        }
+        .content p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 20px; /* Adjust margin bottom */
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Our Blog</h1>
-
-    <h2>Categories</h2>
-    <ul>
-        {% for category in categories %}
-            <li>{{ category.category }}</li>
-        {% endfor %}
-    </ul>
-
-    <h2>Pages</h2>
-    <ul>
-        {% for page in pages %}
-            <li><a href="{% url 'page_detail' page.slug %}">{{ page.title }}</a></li>
-        {% endfor %}
-    </ul>
-
-    <h2>Posts</h2>
-    <ul>
-        {% for post in posts %}
-            <li><a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a></li>
-            {% if post.image %}
-            <img src="{{ post.image.url }}" alt="{{ post.title }}">
-        {% endif %}
-        {% endfor %}
-    </ul>
+    <div class="header">
+        <div class="container">
+            <a href="#" class="logo">LOGO</a>
+            <nav class="navigation">
+                <a href="#">Home</a>
+                <a href="#">Blog</a>
+                <a href="#">Produk</a>
+                <a href="#">Konsultasi</a>
+                <a href="#">Kontak</a>
+            </nav>
+        </div>
+    </div>
+    <div class="title">
+        <h1>AFSKIN</h1>
+    </div>
+    <div class="content">
+        <h2>Selamat Datang di AFSKIN</h2>
+        <p>Kami menyediakan informasi terbaru dan terpercaya mengenai perawatan kulit dan produk-produk skincare yang dapat membantu Anda merawat kulit dengan optimal. Dengan tips dan panduan yang kami berikan, Anda dapat mencapai kulit yang sehat dan bersinar setiap hari.</p>
+        <p>Jelajahi blog kami untuk artikel-artikel menarik tentang perawatan kulit, produk-produk terbaru, dan ulasan produk dari para ahli. Kami juga menyediakan layanan konsultasi langsung untuk membantu Anda menemukan produk yang sesuai dengan kebutuhan kulit Anda.</p>
+        <p>Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan atau membutuhkan bantuan. Kami siap membantu Anda mencapai kulit yang sehat dan cantik.</p>
+    </div>
 </body>
 </html>
