@@ -1,154 +1,208 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AFSKIN - GlowGuide</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    /* Custom CSS for styling */
-    body {
-      font-family: Arial, sans-serif;
-    }
-    .hero-section {
-      background-image: url('skincare_hero.jpg');
-      background-size: cover;
-      color: #ffecef
-      padding: 100px 0;
-      text-align: center;
-    }
-    .highlight-section {
-      background-color: #FFB6C1
-      padding: 50px 0;
-    }
-    .blog-thumbnail {
-      max-height: 200px;
-      object-fit: cover;
-    }
-    .footer-section {
-      background-color: #efdbec;
-      color: #FFB6C1;
-      padding: 20px 0;
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - AFSKIN</title>
+    <!-- Your CSS styles -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('skincare_background.jpg'); /* Background image */
+            background-size: cover;
+            background-color: #eeb9d7;
+            color: #333; /* Dark text color for better contrast */
+        }
+        .header {
+            background-color: #de7bb3; /* Pink background */
+            padding: 20px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navigation {
+            display: flex;
+            gap: 50px;
+        }
+        .navigation a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 20px; /* Increase font size */
+        }
+        .navigation a:hover {
+            color: #a7a7a7; /* Lighter pink on hover */
+        }
+        .title {
+            text-align: center;
+            font-size: 50px;
+            color: #ffffff; /* White text color */
+            margin-top: 20px; /* Reduced top margin */
+            margin-bottom: 20px; /* Reduced bottom margin */
+            animation: moveUp 2s ease-in-out infinite alternate; /* Add animation */
+        }
+        @keyframes moveUp {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+        .title h1 {
+            font-family: 'Pacifico', Arial, sans-serif; /* Set font family */
+            color:  #ffffff; /* Pink color */
+        }
+        .content {
+            padding: 50px; /* Add padding for better readability */
+            background-color:  #f9f9f9; /* Light gray background */
+            border-radius: 20px; /* Rounded corners */
+            max-width: 1000px; /* Limit width */
+            margin: 10px auto 60px; /* Center content and adjust margin */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+        }
+        .content p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 20px; /* Adjust margin bottom */
+        }
+        .article-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px; /* Increase gap between articles */
+            justify-content: center;
+            padding: 20px; /* Add padding to article container */
+        }
+        .article {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .article h3 {
+            margin-top: 0;
+            color: #de7bb3; /* Pink color */
+        }
+        .article p {
+            margin-bottom: 10px;
+            color: #555; /* Dark gray color */
+        }
+        .article a {
+            text-decoration: none;
+            color: #de7bb3;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .article a:hover {
+            color: #a7a7a7;
+        }
+        .footer {
+            background-color: #de7bb3;
+            text-align: center;
+            color: #ffffff;
+            padding: 20px;
+            clear: both;
+            width: 100%;
+        }
+        /* Style for search box */
+        .search-box {
+            margin-right: 20px;
+            position: relative;
+        }
+        .search-box input[type="text"] {
+            width: 200px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+        .search-box button {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            padding: 10px;
+            border: none;
+            background-color: #de7bb3;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .search-box button:hover {
+            background-color: #c6609e;
+        }
+    </style>
 </head>
 <body>
-
-<!-- Header Section -->
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Logo AFSKIN</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Categories</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-
-<!-- Hero Section -->
-<section class="hero-section">
-  <div class="container">
-    <h1 class="display-4">GlowGuide: Destinasi Utama untuk Merawat Kulitmu</h1>
-    <p class="lead">Temukan Panduan Terbaru, Tips, dan Produk Skincare Terbaik</p>
-    <a href="#panduan-awal" class="btn btn-primary btn-lg">Jelajahi Sekarang</a>
-  </div>
-</section>
-
-<!-- Highlights Section -->
-<section class="highlight-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2>Highlights</h2>
-        <p>Ikhtisar singkat tentang apa yang ditawarkan platform, misalnya: "Temukan Panduan Terbaru, Tips, dan Produk Skincare Terbaik"</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Blog Section -->
-<section id="panduan-awal" class="blog-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2>Blog</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card">
-          <img src="blog_thumbnail1.jpg" class="card-img-top blog-thumbnail" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Judul Posting 1</h5>
-            <p class="card-text">Deskripsi singkat tentang postingan pertama.</p>
-            <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
-          </div>
+    <div class="header">
+        <div class="container">
+            <a href="#" class="logo">LOGO</a>
+            <nav class="navigation">
+                <a href="#">Home</a>
+                <a href="#">Blog</a>
+                <a href="#">About</a>
+                <a href="#">Product</a>
+                <a href="#">Contact</a>
+            </nav>
+            <!-- Search box -->
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="blog_thumbnail2.jpg" class="card-img-top blog-thumbnail" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Judul Posting 2</h5>
-            <p class="card-text">Deskripsi singkat tentang postingan kedua.</p>
-            <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="blog_thumbnail3.jpg" class="card-img-top blog-thumbnail" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Judul Posting 3</h5>
-            <p class="card-text">Deskripsi singkat tentang postingan ketiga.</p>
-            <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-</section>
-
-<!-- Footer Section -->
-<footer class="footer-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <p>&copy; 2024 AFSKIN. All Rights Reserved.</p>
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="#">About Us</a></li>
-          <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-          <li class="list-inline-item"><a href="#">Social Media</a></li>
-        </ul>
-      </div>
+    <div class="title">
+        <h1 style="font-size: 60px;">WELCOME TO AFSKIN</h1>
     </div>
-  </div>
-</footer>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="content">
+        <h2 style="color: #de7bb3;">HALO!!</h2>
+        <p style="color: #666;">Kami menyediakan informasi terbaru dan terpercaya mengenai perawatan kulit dan produk-produk skincare yang dapat membantu Anda merawat kulit dengan optimal. Dengan tips dan panduan yang kami berikan, Anda dapat mencapai kulit yang sehat dan bersinar setiap hari.</p>
+    </div>
+    <div class="article-container">
+        <div class="article">
+            <h3>Artikel 1: Tips Perawatan Kulit Sehari-hari</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at augue sit amet justo euismod consequat. Duis dictum mauris nec nisi scelerisque, sed fermentum nisl tempus.</p>
+            <a href="#">Baca Selengkapnya</a>
+        </div>
+        <div class="article">
+            <h3>Artikel 2: Produk Skincare Terbaru</h3>
+            <p>Nulla facilisi. Fusce ac urna sed nisi fermentum lobortis. Vivamus sodales commodo purus, a ultrices velit dignissim vel.</p>
+            <a href="#">Baca Selengkapnya</a>
+        </div>
+    </div>
+    <div class="article-container">
+        <div class="article">
+            <h3>Artikel 3: Rahasia Kulit Sehat</h3>
+            <p>Phasellus nec mauris et ante maximus feugiat. Curabitur nec lectus vel nulla aliquet tincidunt id sit amet metus.</p>
+            <a href="#">Baca Selengkapnya</a>
+        </div>
+        <div class="article">
+            <h3>Artikel 4: Manfaat Menggunakan Sunscreen</h3>
+            <p>Sunscreen sangat penting untuk melindungi kulit dari kerusakan akibat sinar UV. Dengan menggunakan sunscreen secara teratur, Anda dapat mencegah penuaan dini dan risiko kanker kulit.</p>
+            <a href="#">Baca Selengkapnya</a>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2024 AFSKIN - Hak Cipta oleh Afni Kaulan Sadida
+    </div>
 </body>
 </html>
