@@ -1,95 +1,154 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - AFSKIN</title>
-    <!-- Your CSS styles -->
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-image: url('skincare_background.jpg'); /* Background image */
-            background-size: cover;
-            color: #fff; /* White text color for better contrast */
-        }
-        .header {
-            background-color: #ff51b1; /* Pink background */
-            padding: 20px 0;
-            text-align: center;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .logo {
-            color: #ffffff;
-            font-size: 40px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .navigation {
-            display: flex;
-            gap: 50px;
-        }
-        .navigation a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s;
-            font-size: 20px; /* Increase font size */
-        }
-        .navigation a:hover {
-            color: #ffc5e4; /* Lighter pink on hover */
-        }
-        .title {
-            text-align: center;
-            font-size: 50px;
-            color: #fff; /* White text color */
-            margin: 10px auto 20px; /* Adjust margin */
-        }
-        .title h1 {
-            font-family: 'Pacifico', Arial, sans-serif; /* Set font family */
-            color: #ff51b1; /* Pink color */
-        }
-        .content {
-            padding: 50px; /* Add padding for better readability */
-            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-            border-radius: 100px; /* Rounded corners */
-            max-width: 1000px; /* Limit width */
-            margin: 20px auto 60px; /* Center content and adjust margin */
-        }
-        .content p {
-            font-size: 20px;
-            line-height: 1.6;
-            margin-bottom: 20px; /* Adjust margin bottom */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AFSKIN - GlowGuide</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom CSS for styling */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .hero-section {
+      background-image: url('skincare_hero.jpg');
+      background-size: cover;
+      color: #ffecef
+      padding: 100px 0;
+      text-align: center;
+    }
+    .highlight-section {
+      background-color: #FFB6C1
+      padding: 50px 0;
+    }
+    .blog-thumbnail {
+      max-height: 200px;
+      object-fit: cover;
+    }
+    .footer-section {
+      background-color: #efdbec;
+      color: #FFB6C1;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <div class="header">
-        <div class="container">
-            <a href="#" class="logo">LOGO</a>
-            <nav class="navigation">
-                <a href="#">Home</a>
-                <a href="#">Blog</a>
-                <a href="#">Produk</a>
-                <a href="#">Konsultasi</a>
-                <a href="#">Kontak</a>
-            </nav>
+
+<!-- Header Section -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Logo AFSKIN</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <h1 class="display-4">GlowGuide: Destinasi Utama untuk Merawat Kulitmu</h1>
+    <p class="lead">Temukan Panduan Terbaru, Tips, dan Produk Skincare Terbaik</p>
+    <a href="#panduan-awal" class="btn btn-primary btn-lg">Jelajahi Sekarang</a>
+  </div>
+</section>
+
+<!-- Highlights Section -->
+<section class="highlight-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Highlights</h2>
+        <p>Ikhtisar singkat tentang apa yang ditawarkan platform, misalnya: "Temukan Panduan Terbaru, Tips, dan Produk Skincare Terbaik"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Blog Section -->
+<section id="panduan-awal" class="blog-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Blog</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="blog_thumbnail1.jpg" class="card-img-top blog-thumbnail" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Judul Posting 1</h5>
+            <p class="card-text">Deskripsi singkat tentang postingan pertama.</p>
+            <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+          </div>
         </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="blog_thumbnail2.jpg" class="card-img-top blog-thumbnail" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Judul Posting 2</h5>
+            <p class="card-text">Deskripsi singkat tentang postingan kedua.</p>
+            <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="blog_thumbnail3.jpg" class="card-img-top blog-thumbnail" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Judul Posting 3</h5>
+            <p class="card-text">Deskripsi singkat tentang postingan ketiga.</p>
+            <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="title">
-        <h1>AFSKIN</h1>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p>&copy; 2024 AFSKIN. All Rights Reserved.</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">About Us</a></li>
+          <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+          <li class="list-inline-item"><a href="#">Social Media</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="content">
-        <h2>Selamat Datang di AFSKIN</h2>
-        <p>Kami menyediakan informasi terbaru dan terpercaya mengenai perawatan kulit dan produk-produk skincare yang dapat membantu Anda merawat kulit dengan optimal. Dengan tips dan panduan yang kami berikan, Anda dapat mencapai kulit yang sehat dan bersinar setiap hari.</p>
-        <p>Jelajahi blog kami untuk artikel-artikel menarik tentang perawatan kulit, produk-produk terbaru, dan ulasan produk dari para ahli. Kami juga menyediakan layanan konsultasi langsung untuk membantu Anda menemukan produk yang sesuai dengan kebutuhan kulit Anda.</p>
-        <p>Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan atau membutuhkan bantuan. Kami siap membantu Anda mencapai kulit yang sehat dan cantik.</p>
-    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
