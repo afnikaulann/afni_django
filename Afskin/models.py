@@ -4,12 +4,12 @@ from django.db import models
 from django.utils import timezone
 from django.utils.text import slugify
 
-class Category(models.Model):
+class Product(models.Model):  # Mengubah nama Category menjadi Product
     slug = models.SlugField(unique=True)
-    category = models.CharField(max_length=100)
+    product = models.CharField(max_length=100)  # Mengubah category menjadi product
  
     def __str__(self):
-        return self.category
+        return self.product
 
 class Page(models.Model):
     title = models.CharField(max_length=100)
@@ -32,7 +32,7 @@ class Blog(models.Model):
     author = models.CharField(max_length=100)
     content = models.TextField()
     image = models.ImageField(upload_to='post_images/')
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)  # Mengubah category menjadi product
     description = models.TextField()
     status = models.IntegerField(choices=[
         (0, 'Draft'),
@@ -40,6 +40,16 @@ class Blog(models.Model):
     ], default=0)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
+
+class Article(models.Model):
+    title = models.CharField(max_length=100)
+    slug = models.SlugField(unique=True)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.title
 
     def publish(self):
         self.published_date = timezone.now()
