@@ -126,6 +126,25 @@
         .article a:hover {
             color: #a7a7a7;
         }
+        /* CSS untuk gambar dalam artikel */
+        .article-image {
+            display: block; /* Memastikan gambar ditampilkan sebagai blok */
+            max-width: 100%; /* Membuat gambar tidak melebihi lebar konten */
+            height: auto; /* Memastikan rasio aspek gambar dipertahankan */
+            margin: 20px auto; /* Memberikan jarak di atas dan di bawah gambar, serta membuat gambar terpusat */
+            border-radius: 10px; /* Memberikan sudut bulat pada gambar */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan pada gambar */
+        }
+        .footer {
+            background-color: #de7bb3;
+            text-align: center;
+            color: #ffffff;
+            padding: 20px;
+            clear: both;
+            width: 100%;
+            margin-top: 20px; /* Add margin top */
+        }
+
     </style>
 </head>
 <body>
@@ -150,32 +169,32 @@
 
     <div class="article-container">
         <div class="article">
-            <h3>Artikel 1: Tips Perawatan Kulit Sehari-hari</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at augue sit amet justo euismod consequat. Duis dictum mauris nec nisi scelerisque, sed fermentum nisl tempus.</p>
-            <a href="/blog/artikel1/">Baca Selengkapnya</a>
+            <h3>Article 1: Tips Perawatan Kulit Sehari-hari</h3>
+            <img src="https://i.pinimg.com/564x/6c/19/c6/6c19c68558fe97ded9eac1c568a84d38.jpg/">
+            <a href="/blog/article1/">Baca Selengkapnya</a>
         </div>
 
         <div class="article">
-            <h3>Artikel 2: Produk Skincare Terbaru</h3>
+            <h3>Articlel 2: Produk Skincare Terbaru</h3>
             <p>Nulla facilisi. Fusce ac urna sed nisi fermentum lobortis. Vivamus sodales commodo purus, a ultrices velit dignissim vel.</p>
-            <a href="/blog/artikel2/">Baca Selengkapnya</a>
+            <a href="/blog/article2/">Baca Selengkapnya</a>
         </div>
 
         <div class="article">
-            <h3>Artikel 3: Rahasia Kulit Sehat</h3>
+            <h3>Article 3: Rahasia Kulit Sehat</h3>
             <p>Phasellus nec mauris et ante maximus feugiat. Curabitur nec lectus vel nulla aliquet tincidunt id sit amet metus.</p>
-            <a href="/blog/artikel3/">Baca Selengkapnya</a>
+            <a href="/blog/articlel3/">Baca Selengkapnya</a>
         </div>
 
         <div class="article">
-            <h3>Artikel 4: Manfaat Menggunakan Sunscreen</h3>
+            <h3>Article 4: Manfaat Menggunakan Sunscreen</h3>
             <p>Sunscreen sangat penting untuk melindungi kulit dari kerusakan akibat sinar UV. Dengan menggunakan sunscreen secara teratur, Anda dapat mencegah penuaan dini dan risiko kanker kulit.</p>
-            <a href="/blog/artikel4/">Baca Selengkapnya</a>
+            <a href="/blog/articlel4/">Baca Selengkapnya</a>
         </div>
     </div>
 
-    <div class="footer">
-        <!-- Footer content -->
-    </div>
+    <footer class="footer">
+        &copy; 2024 AFSKIN - Hak Cipta oleh Afni Kaulan Sadida
+    </footer>
 </body>
 </html>

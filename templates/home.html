@@ -1,265 +1,240 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - AFSKIN</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-size: cover;
-            background-color: #eeb9d7;
-            color: #333; /* Dark text color for better contrast */
-        }
-        .header {
-            background-color: #de7bb3; /* Pink background */
-            padding: 20px 50px;
-            text-align: center;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .logo {
-            color: #ffffff;
-            font-size: 40px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .navigation {
-            display: flex;
-            gap: 50px;
-        }
-        .navigation a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s;
-            font-size: 20px; /* Increase font size */
-        }
-        .navigation a:hover {
-            color: #ffffff; /* Lighter pink on hover */
-        }
-        .navigation a.active {
-            color: #ffffff; /* Change color for active menu item */
-        }
-        .title {
-            text-align: center;
-            font-size: 50px;
-            color: #ffffff; /* White text color */
-            margin-top: 20px; /* Reduced top margin */
-            margin-bottom: 20px; /* Reduced bottom margin */
-            animation: moveUp 2s ease-in-out infinite alternate; /* Add animation */
-        }
-        @keyframes moveUp {
-            0% {
-                transform: translateY(0);
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home - AFSKIN</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-size: cover;
+                background-color: #eeb9d7;
+                color: #333; /* Dark text color for better contrast */
             }
-            100% {
-                transform: translateY(-20px);
+            .header {
+                background-color: #de7bb3; /* Pink background */
+                padding: 20px 50px;
+                text-align: center;
             }
-        }
-        .title h1 {
-            font-family: 'Verdana', sans-serif; /* Set font family */
-            color:  #ffffff; /* Pink color */
-        }
-        .content {
-            padding: 50px; /* Add padding for better readability */
-            background-color:  #f9f9f9; /* Light gray background */
-            border-radius: 20px; /* Rounded corners */
-            max-width: 1000px; /* Limit width */
-            margin: 10px auto 60px; /* Center content and adjust margin */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
-            text-align: justify; /* Ratakan teks kanan-kiri */
-            display: flex;
-            justify-content: space-between;
-        }
-        .content-inner {
-            flex: 1;
-        }
-        .calculator {
-            flex: 1;
-            padding-left: 30px;
-        }
-        .calculator h3 {
-            color: #de7bb3;
-        }
-        .calculator p {
-            color: #666;
-            margin-bottom: 20px;
-        }
-        .calculator form {
-            margin-top: 20px;
-        }
-        .calculator label {
-            display: block;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .calculator select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-        .calculator button {
-            background-color: #de7bb3;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .calculator button:hover {
-            background-color: #c6609e;
-        }
-        .article-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px; /* Increase gap between articles */
-            justify-content: center;
-            padding: 20px; /* Add padding to article container */
-        }
-        .article {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .article:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-        .article h3 {
-            margin-top: 0;
-            color: #de7bb3; /* Pink color */
-        }
-        .article p {
-            margin-bottom: 10px;
-            color: #555; /* Dark gray color */
-        }
-        .article a {
-            text-decoration: none;
-            color: #de7bb3;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        .article a:hover {
-            color: #a7a7a7;
-        }
-        .footer {
-            background-color: #de7bb3;
-            text-align: center;
-            color: #ffffff;
-            padding: 20px;
-            clear: both;
-            width: 100%;
-        }
-        /* Style for search box */
-        .search-box {
-            margin-right: 20px;
-            position: relative;
-        }
-        .search-box input[type="text"] {
-            width: 200px;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            outline: none;
-        }
-        .search-box button {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            transform: translateY(-50%);
-            padding: 10px;
-            border: none;
-            background-color: #c7b1be;
-            color: #fff;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .search-box button:hover {
-            background-color: #c6609e;
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <div class="container">
-            <a href="#" class="logo">AFSKIN</a>
-            <!-- Navbar -->
-            <nav class="navigation">
-                <a href="#" class="active">Home</a>
-                <a href="/blog/">Blog</a>
-                <a href="/about/">About</a>
-                <a href="/product/">Product</a>
-                <a href="/contact/">Contact</a>
-                
-            </nav>
-            <!-- Search box -->
-            <div class="search-box">
-                <input type="text" placeholder="Search...">
-                <button type="submit">Search</button>
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .logo {
+                color: #ffffff;
+                font-size: 40px;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            .navigation {
+                display: flex;
+                gap: 50px;
+            }
+            .navigation a {
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s;
+                font-size: 20px; /* Increase font size */
+            }
+            .navigation a:hover {
+                color: #ffffff; /* Lighter pink on hover */
+            }
+            .navigation a.active {
+                color: #ffffff; /* Change color for active menu item */
+            }
+            .title {
+                text-align: center;
+                font-size: 50px;
+                color: #ffffff; /* White text color */
+                margin-top: 20px; /* Reduced top margin */
+                margin-bottom: 20px; /* Reduced bottom margin */
+                animation: moveUp 2s ease-in-out infinite alternate; /* Add animation */
+            }
+            @keyframes moveUp {
+                0% {
+                    transform: translateY(0);
+                }
+                100% {
+                    transform: translateY(-20px);
+                }
+            }
+            .title h1 {
+                font-family: 'Verdana', sans-serif; /* Set font family */
+                color:  #ffffff; /* Pink color */
+            }
+            .content {
+                padding: 50px; /* Add padding for better readability */
+                background-color:  #f9f9f9; /* Light gray background */
+                border-radius: 20px; /* Rounded corners */
+                max-width: 1000px; /* Limit width */
+                margin: 10px auto 60px; /* Center content and adjust margin */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+                text-align: justify; /* Ratakan teks kanan-kiri */
+                display: flex;
+                justify-content: space-between;
+            }
+            .content-inner {
+                flex: 1;
+            }
+            .calculator {
+                flex: 1;
+                padding-left: 30px;
+            }
+            .calculator h3 {
+                color: #de7bb3;
+            }
+            .calculator p {
+                color: #666;
+                margin-bottom: 20px;
+            }
+            .calculator form {
+                margin-top: 20px;
+            }
+            .calculator label {
+                display: block;
+                margin-bottom: 10px;
+                color: #333;
+            }
+            .calculator select {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            .calculator button {
+                background-color: #de7bb3;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            .calculator button:hover {
+                background-color: #c6609e;
+            }
+            .article-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px; /* Increase gap between articles */
+                justify-content: center;
+                padding: 20px; /* Add padding to article container */
+            }
+            .article {
+                background-color: #ffffff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .article:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+            .article h3 {
+                margin-top: 0;
+                color: #de7bb3; /* Pink color */
+            }
+            .article p {
+                margin-bottom: 10px;
+                color: #555; /* Dark gray color */
+            }
+            .article a {
+                text-decoration: none;
+                color: #de7bb3;
+                font-weight: bold;
+                transition: color 0.3s;
+            }
+            .article a:hover {
+                color: #a7a7a7;
+            }
+            .footer {
+                background-color: #de7bb3;
+                text-align: center;
+                color: #ffffff;
+                padding: 20px;
+                clear: both;
+                width: 100%;
+            }
+            /* Style for search box */
+            .search-box {
+                margin-right: 20px;
+                position: relative;
+            }
+            .search-box input[type="text"] {
+                width: 200px;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                outline: none;
+            }
+            .search-box button {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                padding: 10px;
+                border: none;
+                background-color: #c7b1be;
+                color: #fff;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            .search-box button:hover {
+                background-color: #c6609e;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="container">
+                <a href="#" class="logo">AFSKIN</a>
+                <!-- Navbar -->
+                <nav class="navigation">
+                    <a href="#" class="active">Home</a>
+                    <a href="/blog/">Blog</a>
+                    <a href="/about/">About</a>
+                    <a href="/product/">Product</a>
+                    <a href="/contact/">Contact</a>
+                    
+                </nav>
+                <!-- Search box -->
+                <div class="search-box">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="title">
-        <h1 style="font-size: 60px;">WELCOME TO AFSKIN</h1>
-    </div>
-    <div class="content">
-        <div class="content-inner">
-            <h2 style="color: #de7bb3;">HALO!!</h2>
-            <p style="color: #666;">AFSKIN hadir untuk memberikan tips dan trik skincare yang bermanfaat. Kami menyajikan informasi yang jelas dan mudah dipahami, sehingga Anda bisa merawat kulit dengan lebih baik dan percaya diri. 
-                Yuk, bergabung dengan kami untuk meraih kulit sehat dan bersinar setiap hari!</p>
+        <div class="title">
+            <h1 style="font-size: 60px;">WELCOME TO AFSKIN</h1>
         </div>
-        <div class="calculator">
-            <h3>Kenali Kulitmu dengan Lebih Baik!  </h3>
-            <p>Masukkan jenis perawatan kulit Anda dan temukan produk yang cocok untuk Anda!</p>
-            <form>
-                <label for="skinType">Jenis Kulit:</label>
-                <select name="skinType" id="skinType">
-                    <option value="normal">Normal</option>
-                    <option value="dry">Kering</option>
-                    <option value="oily">Berminyak</option>
-                    <option value="combination">Kombinasi</option>
-                </select>
-                <button type="submit">Cari Produk</button>
-            </form>
+        <div class="content">
+            <div class="content-inner">
+                <h2 style="color: #de7bb3;">HALO!!</h2>
+                <p style="color: #666;">AFSKIN hadir untuk memberikan tips dan trik skincare yang bermanfaat. Kami menyajikan informasi yang jelas dan mudah dipahami, sehingga Anda bisa merawat kulit dengan lebih baik dan percaya diri. 
+                    Yuk, bergabung dengan kami untuk meraih kulit sehat dan bersinar setiap hari!</p>
+            </div>
+            <div class="calculator">
+                <h3>Kenali Kulitmu dengan Lebih Baik!  </h3>
+                <p>Masukkan jenis perawatan kulit Anda dan temukan produk yang cocok untuk Anda!</p>
+                <form>
+                    <label for="skinType">Jenis Kulit:</label>
+                    <select name="skinType" id="skinType">
+                        <option value="normal">Normal</option>
+                        <option value="dry">Kering</option>
+                        <option value="oily">Berminyak</option>
+                        <option value="combination">Kombinasi</option>
+                    </select>
+                    <button type="submit">Cari Produk</button>
+                </form>
+            </div>
         </div>
-    </div>
-    <div class="article-container">
-        <div class="article">
-            <img src="nama_gambar1.jpg" alt="Tips Perawatan Kulit Sehari-hari">
-            <h3>Tips Perawatan Kulit Sehari-hari</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at augue sit amet justo euismod consequat. Duis dictum mauris nec nisi scelerisque, sed fermentum nisl tempus.</p>
-            <a href="/
-            
-            /artikel1/">Baca Selengkapnya</a>
-        </div>
-        <div class="article">
-            <img src="nama_gambar2.jpg" alt="Produk Skincare Terbaru">
-            <h3>Produk Skincare Terbaru</h3>
-            <p>Nulla facilisi. Fusce ac urna sed nisi fermentum lobortis. Vivamus sodales commodo purus, a ultrices velit dignissim vel.</p>
-            <a href="/blog/artikel2/">Baca Selengkapnya</a>
-        </div>
-    </div>
-    <div class="article-container">
-        <div class="article">
-            <h3>Rahasia Kulit Sehat</h3>
-            <p>Phasellus nec mauris et ante maximus feugiat. Curabitur nec lectus vel nulla aliquet tincidunt id sit amet metus.</p>
-            <a href="/blog/artikel3/">Baca Selengkapnya</a>
-        </div>
-        <div class="article">
-            <h3>Manfaat Menggunakan Sunscreen</h3>
-            <p>Sunscreen sangat penting untuk melindungi kulit dari kerusakan akibat sinar UV. Dengan menggunakan sunscreen secara teratur, Anda dapat mencegah penuaan dini dan risiko kanker kulit.</p>
-            <a href="/blog/artikel4/">Baca Selengkapnya</a>
+    
         </div>
     </div>
     <div class="footer">
