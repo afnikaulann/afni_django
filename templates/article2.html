@@ -1,266 +1,277 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article 2 - AFSKIN</title>
-    <style>
-        /* Your existing CSS styles... */
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Article 2 - AFSKIN</title>
+        <style>
+            /* Your existing CSS styles... */
 
-        /* Additional styles for Article 2 */
-        .article-content {
-            max-width: 800px; /* Set max-width for content */
-            margin: 0 auto; /* Center content */
-            padding: 20px; /* Add padding for spacing */
-        }
+            /* Additional styles for Article 2 */
+            .article-content {
+                max-width: 800px; /* Set max-width for content */
+                margin: 0 auto; /* Center content */
+                padding: 20px; /* Add padding for spacing */
+            }
 
-        .article-content h1 {
-            color: #de7bb3; /* Pink color */
-        }
+            .article-content h1 {
+                color: #de7bb3; /* Pink color */
+            }
 
-        .article-content p {
-            color: #555; /* Dark gray color */
-        }
+            .article-content p {
+                color: #555; /* Dark gray color */
+            }
 
-        .article-content a {
-            text-decoration: none;
-            color: #de7bb3;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
+            .article-content a {
+                text-decoration: none;
+                color: #de7bb3;
+                font-weight: bold;
+                transition: color 0.3s;
+            }
 
-        .article-content a:hover {
-            color: #a7a7a7;
-        }
-        h1 {
-             text-align: center;
-        }
+            .article-content a:hover {
+                color: #a7a7a7;
+            }
+            h1 {
+                text-align: center;
+            }
 
-        .product-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
+            .product-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+            }
 
-        .product {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+            .product {
+                background-color: #f9f9f9;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
 
-        .product img {
-            max-width: 100%;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-        /* CSS untuk gambar dengan latar belakang */
-        .product img {
-            max-width: 100%;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            background-image: url('URL_GAMBAR_YANG_DISALIN_DARI_GOOGLE');
-            background-size: cover; /* Sesuaikan ukuran gambar */
-            background-position: center; /* Posisikan gambar ke tengah */
-            width: 100%; /* Sesuaikan lebar gambar */
-            height: 200px; /* Sesuaikan tinggi gambar */
-        }
+            .product img {
+                max-width: 100%;
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            /* CSS untuk gambar dengan latar belakang */
+            .product img {
+                max-width: 100%;
+                border-radius: 5px;
+                margin-bottom: 0px;
+                background-image: url('URL_GAMBAR_YANG_DISALIN_DARI_GOOGLE');
+                background-size: cover; /* Sesuaikan ukuran gambar */
+                background-position: center; /* Posisikan gambar ke tengah */
+                width: 100%; /* Sesuaikan lebar gambar */
+                height: 350px; /* Sesuaikan tinggi gambar */
+            }
+            article img {
+                max-width: 320px; /* Memastikan gambar tidak melebihi lebar konten */
+                height: auto; /* Memastikan rasio aspek gambar dipertahankan */
+                margin-bottom: 10px; /* Memberikan jarak di bawah gambar */
+            }
+            .footer {
+                background-color: #de7bb3;
+                text-align: center;
+                color: #ffffff;
+                padding: 20px;
+                width: 100%;
+                clear: both; /* Clear floats */
+            }
+            /* Styles for header */
+            .blog-header {
+                background-color: #de7bb3; /* Pink background */
+                padding: 20px 50px;
+                text-align: center;
+                margin-bottom: 20px; /* Add margin bottom for spacing */
+            }
 
+            .blog-header .container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
 
-        /* Styles for header */
-        .blog-header {
-            background-color: #de7bb3; /* Pink background */
-            padding: 20px 50px;
-            text-align: center;
-            margin-bottom: 20px; /* Add margin bottom for spacing */
-        }
+            .blog-header .logo {
+                color: #ffffff;
+                font-size: 40px; /* Font size same as Home */
+                font-weight: bold;
+                text-decoration: none;
+                font-family: Arial, sans-serif; /* Use the same font as Home */
+            }
 
-        .blog-header .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+            .blog-header .navigation {
+                display: flex;
+                gap: 50px; /* Gap same as Home */
+            }
 
-        .blog-header .logo {
-            color: #ffffff;
-            font-size: 40px; /* Font size same as Home */
-            font-weight: bold;
-            text-decoration: none;
-            font-family: Arial, sans-serif; /* Use the same font as Home */
-        }
+            .blog-header .navigation a {
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s;
+                font-size: 20px; /* Font size same as Home */
+                font-family: Arial, sans-serif; /* Use the same font as Home */
+            }
 
-        .blog-header .navigation {
-            display: flex;
-            gap: 50px; /* Gap same as Home */
-        }
+            .blog-header .navigation a:hover {
+                color: #ffffff; /* Lighter pink on hover */
+            }
 
-        .blog-header .navigation a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s;
-            font-size: 20px; /* Font size same as Home */
-            font-family: Arial, sans-serif; /* Use the same font as Home */
-        }
+            .blog-header .navigation a.active {
+                color: #ffffff; /* Change color for active menu item */
+            }
 
-        .blog-header .navigation a:hover {
-            color: #ffffff; /* Lighter pink on hover */
-        }
+            .blog-header .search-box {
+                margin-right: 20px;
+                position: relative;
+            }
 
-        .blog-header .navigation a.active {
-            color: #ffffff; /* Change color for active menu item */
-        }
+            .blog-header .search-box input[type="text"] {
+                width: 200px;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                outline: none;
+                font-size: 16px; /* Font size same as Home */
+                font-family: Arial, sans-serif; /* Use the same font as Home */
+            }
 
-        .blog-header .search-box {
-            margin-right: 20px;
-            position: relative;
-        }
+            .blog-header .search-box button {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                padding: 10px;
+                border: none;
+                background-color: #c7b1be;
+                color: #fff;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
 
-        .blog-header .search-box input[type="text"] {
-            width: 200px;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            outline: none;
-            font-size: 16px; /* Font size same as Home */
-            font-family: Arial, sans-serif; /* Use the same font as Home */
-        }
-
-        .blog-header .search-box button {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            transform: translateY(-50%);
-            padding: 10px;
-            border: none;
-            background-color: #c7b1be;
-            color: #fff;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .blog-header .search-box button:hover {
-            background-color: #c6609e;
-        }
-    </style>
-</head>
-<body>
-    <div class="blog-header">
-        <div class="container">
-            <a href="#" class="logo">AFSKIN</a>
-            <!-- Navbar -->
-            <nav class="navigation">
-                <a href="/">Home</a>
-                <a href="/blog/" class="active">Blog</a>
-                <a href="/about/">About</a>
-                <a href="/product/">Product</a>
-                <a href="/contact/">Contact</a>
-            </nav>
-            <!-- Search box -->
-            <div class="search-box">
-                <input type="text" placeholder="Search...">
-                <button type="submit">Search</button>
+            .blog-header .search-box button:hover {
+                background-color: #c6609e;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="blog-header">
+            <div class="container">
+                <a href="#" class="logo">AFSKIN</a>
+                <!-- Navbar -->
+                <nav class="navigation">
+                    <a href="/">Home</a>
+                    <a href="/blog/" class="active">Blog</a>
+                    <a href="/about/">About</a>
+                    <a href="/product/">Product</a>
+                    <a href="/contact/">Contact</a>
+                </nav>
+                <!-- Search box -->
+                <div class="search-box">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="article-content">
-        <h1>Produk Terbaru di Indonesia</h1>
-        <p>Menjaga kulit Anda tetap sehat dan bercahaya adalah langkah penting dalam rutinitas perawatan kulit. Berikut adalah beberapa nama produk skincare terbaru di Indonesia yang layak untuk diperhatikan:</p>
-        <div class="product-container">
-            <div class="product">
-                <img src="data:image/jpeg;base64,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">
-                <h2>Azarine</h2>
-                <p>Azarine, sebagai merek kecantikan lokal, telah menjadi fokus utama dalam perawatan wajah dan kulit sejak didirikan pada tahun 2002 di Sidoarjo. Dengan menggunakan bahan-bahan yang telah teruji dan disesuaikan dengan kebutuhan kulit di iklim tropis, merek ini telah memperoleh sertifikasi halal dan BPOM, serta dikelola oleh PT. Wahana Kosmetika Indonesia. Dengan menerapkan pedoman Good Manufacturing Practice, kualitas produk Azarine dijamin terjamin.
+        <div class="article-content">
+            <h1>Produk Terbaru di Indonesia</h1>
+            <p>Menjaga kulit Anda tetap sehat dan bercahaya adalah langkah penting dalam rutinitas perawatan kulit. Berikut adalah beberapa nama produk skincare terbaru di Indonesia yang layak untuk diperhatikan:</p>
+            <div class="product-container">
+                <div class="product">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0YD0tFbyW8q28AqAN163M7rJhj3qhbSILs05fJRuGboPDv7qulxe3pHGq5rR4U25NPiJlUjJRhHAB3LMaveobc4_JofHLEfcli14fgURasKG064GHACwmdl4TJwpHceACVDvGf0MtYHgfSZe1EfYOd9ZJ12nT7ilkDbjTSys86qFqQT5zVilClOpnZ775/s1200/LEE_MIN_HO_-_AZARINE_BRAND_AMBASSADOR_-_PORTRAIT.webp">
+                    <h2>Azarine</h2>
+                    <p>Azarine, sebagai merek kecantikan lokal, telah menjadi fokus utama dalam perawatan wajah dan kulit sejak didirikan pada tahun 2002 di Sidoarjo. Dengan menggunakan bahan-bahan yang telah teruji dan disesuaikan dengan kebutuhan kulit di iklim tropis, merek ini telah memperoleh sertifikasi halal dan BPOM, serta dikelola oleh PT. Wahana Kosmetika Indonesia. Dengan menerapkan pedoman Good Manufacturing Practice, kualitas produk Azarine dijamin terjamin.
 
-                    Setiap tahun, Azarine terus menghadirkan produk-produk terbaru yang sesuai dengan tren, mulai dari facial wash, sunscreen, hingga hair serum. Belum lama ini, Azarine membuat gebrakan dengan mengumumkan Red Velvet, girl grup terkenal asal Korea Selatan, dan bahkan Lee Minho sebagai duta merek produk kosmetik mereka. Kolaborasi ini tidak hanya memperkuat posisi Azarine di pasar, tetapi juga menegaskan komitmen mereka dalam menghadirkan produk yang sesuai dengan kebutuhan dan tren terkini.!</p>
-                
-            </div>
-            <div class="product">
-                <img src="glowlixir-essence.jpg" alt="Avoskin">
-                <h2>Avoskin</h2>
-                <p>Avoskin, merek lokal yang berakar dari Yogyakarta sejak tahun 2014, menawarkan beragam produk kecantikan untuk merawat wajah dan kulit secara optimal. Berbagai produknya dirancang dengan aman, bahkan cocok digunakan oleh ibu hamil dan menyusui.
-                    Dengan fokus pada inovasi, Avoskin terus meluncurkan produk-produk yang responsif terhadap kebutuhan pasar saat ini. Dari serum anti-aging hingga produk perawatan kulit berbahan alami, setiap produk Avoskin dirancang untuk memberikan solusi yang efektif dan sesuai dengan tren kecantikan terbaru.
-                    Didukung oleh komitmen untuk menjaga kualitas produk, Avoskin terus menghadirkan inovasi terbaru. Merek ini mendasarkan diri pada tiga prinsip utama: memberdayakan masyarakat, terutama wanita; berkomitmen pada bahan-bahan alami dan kemasan ramah lingkungan; serta berkolaborasi untuk mempromosikan produk dan berkembang bersama komunitas perusahaan..</p>
-            </div>
-            <div class="product">
-                <img src="glowlixir-essence.jpg" alt="Wardah">
-                <h2>Wardah</h2>
-                <p>Wardah, sebagai salah satu brand kecantikan lokal yang telah berdiri sejak tahun 1995, kembali menjadi sorotan dalam industri kecantikan dengan produk-produknya yang sesuai dengan tren terkini. Dikenal sebagai pelopor kosmetik halal di Indonesia, Wardah berhasil menjaga posisinya sebagai brand yang mendefinisikan standar kecantikan yang modern dan inklusif.
-
-                    Dalam era di mana kesadaran akan kehalalan semakin meningkat, Wardah menjadi pilihan utama bagi mereka yang mengutamakan produk kosmetik yang sesuai dengan prinsip keagamaan. Dengan sertifikasi halal dari MUI, Wardah tidak hanya memenuhi kebutuhan konsumen Indonesia, tetapi juga menarik perhatian pasar internasional yang semakin mengapresiasi keberagaman dalam dunia kecantikan.
+                        Setiap tahun, Azarine terus menghadirkan produk-produk terbaru yang sesuai dengan tren, mulai dari facial wash, sunscreen, hingga hair serum. Belum lama ini, Azarine membuat gebrakan dengan mengumumkan Red Velvet, girl grup terkenal asal Korea Selatan, dan bahkan Lee Minho sebagai duta merek produk kosmetik mereka. Kolaborasi ini tidak hanya memperkuat posisi Azarine di pasar, tetapi juga menegaskan komitmen mereka dalam menghadirkan produk yang sesuai dengan kebutuhan dan tren terkini.!</p>
                     
-                    Dengan produk-produk kosmetik, perawatan rambut, dan tubuh yang terus mengikuti tren terkini, Wardah membuktikan bahwa kecantikan halal bukanlah sekadar sebuah trend, tetapi merupakan gaya hidup yang semakin diakui dan diadopsi oleh banyak orang di seluruh dunia.
-            </div>
-            <div class="product">
-                <img src="glowlixir-essence.jpg" alt="Scarlett Whitening">
-                <h2>Scarlett Whitening</h2>
-                <p>Scarlett Whitening, brand kecantikan lokal yang lahir pada tahun 2017, telah berhasil menembus pasar internasional dan menjadi tren yang disukai tidak hanya di dalam negeri, tetapi juga di luar negeri. Dikenal dengan formulasi produknya yang inovatif dan efektif dalam mencerahkan serta menjaga kesehatan kulit tubuh, wajah, dan rambut, Scarlett Whitening telah mengukuhkan posisinya sebagai salah satu brand kecantikan yang paling dicari dan diandalkan di berbagai belahan dunia.
+                </div>
+                <div class="product">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-KtrQl09FTqDkh6yYDvlcHZwBPnyNRQNRXPV4JvZ1BU_4JOoTvkDTVLFXKKSNg9ZC3xLNaHCYS3lSxaYDA0FcuvObj6Pwj0h5hk86-qOH0oyZcMRMsGMj-NA9Ldrfpgzq_6agGL1xgYfoGnv-jnrQviCD6BtrTC0ggGH_oquMwdAKkxXIR1gFdhelBT08/s1200/19e68dbd-0b19-44f8-9c2f-e6ce2e2212c0.webp" alt="Avoskin">
+                    <h2>Avoskin</h2>
+                    <p>Avoskin, merek lokal yang berakar dari Yogyakarta sejak tahun 2014, menawarkan beragam produk kecantikan untuk merawat wajah dan kulit secara optimal. Berbagai produknya dirancang dengan aman, bahkan cocok digunakan oleh ibu hamil dan menyusui.
+                        Dengan fokus pada inovasi, Avoskin terus meluncurkan produk-produk yang responsif terhadap kebutuhan pasar saat ini. Dari serum anti-aging hingga produk perawatan kulit berbahan alami, setiap produk Avoskin dirancang untuk memberikan solusi yang efektif dan sesuai dengan tren kecantikan terbaru.
+                        Didukung oleh komitmen untuk menjaga kualitas produk, Avoskin terus menghadirkan inovasi terbaru. Merek ini mendasarkan diri pada tiga prinsip utama: memberdayakan masyarakat, terutama wanita; berkomitmen pada bahan-bahan alami dan kemasan ramah lingkungan; serta berkolaborasi untuk mempromosikan produk dan berkembang bersama komunitas perusahaan..</p>
+                </div>
+                <div class="product">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgE9y34UsB-W32KRBhhrqclkMJppHzCeX9kU_Yvn39h1lgpnLBcod8JMc4K3T6Siw40hyYz6SzCThfK1zzAgRvm3_2ORIkErOIjIfvrzRoMmnssFJAvb-aG03lsUGRwTFVn1B9xuJCiO5CPFQnnjzher0E0txOSEgM4LDbNYizwp1YgIcBZC0vmu1aWhQ4E/s1200/ca2bd229d9dc0aa435064559f29a29ec.jpg" alt="Wardah">
+                    <h2>Wardah</h2>
+                    <p>Wardah, sebagai salah satu brand kecantikan lokal yang telah berdiri sejak tahun 1995, kembali menjadi sorotan dalam industri kecantikan dengan produk-produknya yang sesuai dengan tren terkini. Dikenal sebagai pelopor kosmetik halal di Indonesia, Wardah berhasil menjaga posisinya sebagai brand yang mendefinisikan standar kecantikan yang modern dan inklusif.
 
-                    Dengan dukungan konsumen setia di seluruh dunia yang semakin mengapresiasi keunggulan produk lokal, Scarlett Whitening telah berhasil menembus pasar-pasar global dan mendapatkan pengakuan atas kualitasnya yang tinggi. Ini membuktikan bahwa produk-produk Scarlett Whitening tidak hanya menjadi tren dalam industri kecantikan lokal, tetapi juga mampu bersaing dan menjadi pilihan teratas di pasar internasional.
-            </div>
-            <div class="product">
-                    <img src="glowlixir-essence.jpg" alt="Somethinc">
-                    <h2>Somethinc</h2>
-                    <p>Brand Somethinc, meskipun baru berdiri pada tahun 2019, telah mencatat prestasi yang luar biasa dalam dunia skincare lokal. Dengan total penjualan yang mencapai Rp53.2 miliar, Somethinc berhasil merebut posisi puncak dalam industri ini dalam waktu yang relatif singkat.
-
-                        Yang membedakan Somethinc dari brand lain adalah pendekatannya yang unik dalam merancang produk skincare yang disesuaikan dengan kebutuhan kulit perempuan Indonesia. Dengan fokus pada bahan-bahan berkualitas tinggi, Somethinc menawarkan solusi efektif dan aman untuk berbagai masalah kulit yang umum dihadapi oleh konsumen lokal.
+                        Dalam era di mana kesadaran akan kehalalan semakin meningkat, Wardah menjadi pilihan utama bagi mereka yang mengutamakan produk kosmetik yang sesuai dengan prinsip keagamaan. Dengan sertifikasi halal dari MUI, Wardah tidak hanya memenuhi kebutuhan konsumen Indonesia, tetapi juga menarik perhatian pasar internasional yang semakin mengapresiasi keberagaman dalam dunia kecantikan.
                         
-                        Keberhasilan Somethinc menunjukkan bahwa inovasi dan dedikasi terhadap kualitas dapat membawa brand lokal menuju puncak kesuksesan dalam industri kecantikan. Dalam waktu singkat, Somethinc telah menjadi pilihan utama bagi mereka yang mencari produk skincare yang berkualitas dan sesuai dengan kebutuhan kulit Indonesia..</p>
-            </div>
-            <div class="product">
-                    <img src="glowlixir-essence.jpg" alt="Emina">
-                    <h2>Emina</h2>
-                <p>Brand Emina terkenal sebagai salah satu brand kecantikan favorit remaja Indonesia. Dengan harganya yang terjangkau dan juga packaging yang manis, tak heran bahwa brand ini berhasil masuk ke dalam top 10 brand skincare lokal. 
+                        Dengan produk-produk kosmetik, perawatan rambut, dan tubuh yang terus mengikuti tren terkini, Wardah membuktikan bahwa kecantikan halal bukanlah sekadar sebuah trend, tetapi merupakan gaya hidup yang semakin diakui dan diadopsi oleh banyak orang di seluruh dunia.
+                </div>
+                <div class="product">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjiDXhzCpaNRyEfAOne7VNpZRWCixcuGMWtj9To0LdeOdxN9op1F_KFoDl9Q9ejNh9luiB0Kh9SpwlOfjEm6NJRq4wmtZF0jTH5wGmHFRs-45wbJzAnVlFbkLgEA7P6_HTztwQ4LAc60iHVmBXFVGWIPSUoP-m4N8FCxmpQz6BH1Hfy8Bc8tcUP7mQywo-j/s1600/cc34e3236a5073e1779634b6c9e07ff8.jpg" alt="Scarlett Whitening">
+                    <h2>Scarlett Whitening</h2>
+                    <p>Scarlett Whitening, brand kecantikan lokal yang lahir pada tahun 2017, telah berhasil menembus pasar internasional dan menjadi tren yang disukai tidak hanya di dalam negeri, tetapi juga di luar negeri. Dikenal dengan formulasi produknya yang inovatif dan efektif dalam mencerahkan serta menjaga kesehatan kulit tubuh, wajah, dan rambut, Scarlett Whitening telah mengukuhkan posisinya sebagai salah satu brand kecantikan yang paling dicari dan diandalkan di berbagai belahan dunia.
 
-                    Terdata bahwa penjualan brand Emina di marketplace telah mencapai Rp7.4 miliar selama kuartal II – 2022. Brand skincare lokal telah menghadirkan berbagai produk skincare mulai dari face wash, moisturizer, toner, dan lainnya,Emina terus berinovasi untuk memenuhi kebutuhan perawatan kulit para remaja Indonesia.
+                        Dengan dukungan konsumen setia di seluruh dunia yang semakin mengapresiasi keunggulan produk lokal, Scarlett Whitening telah berhasil menembus pasar-pasar global dan mendapatkan pengakuan atas kualitasnya yang tinggi. Ini membuktikan bahwa produk-produk Scarlett Whitening tidak hanya menjadi tren dalam industri kecantikan lokal, tetapi juga mampu bersaing dan menjadi pilihan teratas di pasar internasional.
+                </div>
+                <div class="product">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKeBAtTxJPIqu5S_tMMow789DaAQ_X-x4IpQ8psjsU2xBZbjwajs0w2Ro8JfxZxPGRGgPTmPt9wjSYl7DjwBgX8zfSh_wXvF5RVJskB9O20VaqLXfS7hXqP4yKTID8CelbKeF3G-xZkwkWGGXDEGoWIGyYT7ZVfjsjWMrm9y_Gv7QOCGPDB8LIWjVBeToa/s1200/1db89c90e778f7d259a3748f00a4082e.png" alt="Somethinc">
+                        <h2>Somethinc</h2>
+                        <p>Brand Somethinc, meskipun baru berdiri pada tahun 2019, telah mencatat prestasi yang luar biasa dalam dunia skincare lokal. Dengan total penjualan yang mencapai Rp53.2 miliar, Somethinc berhasil merebut posisi puncak dalam industri ini dalam waktu yang relatif singkat.
 
-                    Kehadiran Emina tidak hanya sebagai sebuah brand kecantikan, tetapi juga sebagai bagian dari gaya hidup dan ekspresi diri para remaja. Dengan produk-produk yang dapat diandalkan dan terjangkau, Emina tetap menjadi pilihan utama bagi mereka yang mengutamakan perawatan kulit yang efektif dan menyenangkan.</p>
-            </div>
-            <div class="product">
-                    <img src="glowlixir-essence.jpg" alt="Skintific">
-                    <h2>Skintific</h2>
-                    <p>Skintific, merek produk perawatan kulit (skincare) yang memperkenalkan produk mereka di akhir 2021 untuk masuk menjadi salah satu merek papan atas di Indonesia dan termasuk salah satu yang banyak dicari.
+                            Yang membedakan Somethinc dari brand lain adalah pendekatannya yang unik dalam merancang produk skincare yang disesuaikan dengan kebutuhan kulit perempuan Indonesia. Dengan fokus pada bahan-bahan berkualitas tinggi, Somethinc menawarkan solusi efektif dan aman untuk berbagai masalah kulit yang umum dihadapi oleh konsumen lokal.
+                            
+                            Keberhasilan Somethinc menunjukkan bahwa inovasi dan dedikasi terhadap kualitas dapat membawa brand lokal menuju puncak kesuksesan dalam industri kecantikan. Dalam waktu singkat, Somethinc telah menjadi pilihan utama bagi mereka yang mencari produk skincare yang berkualitas dan sesuai dengan kebutuhan kulit Indonesia..</p>
+                </div>
+                <div class="product">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_3I_rMOFZtZgftv_2bDfuffZvyn0PLJm9U5kTTKutOU-ThIonKby5GRSGYiPIH-YlLpp8thD7iSnCtjF_5IphyTOPWaoUSJcEmD9AcSbTLtY7pDRsyCVIU57ZduMFuatTx3MFZ05R7JxSQWdNsaTKLtyV32NI3LmXa3IZPnqshI-v_3GsFZr233sIKZTw/s1200/03f3eabeaef6427ee9b9817758fb875f.jpg" alt="Emina">
+                        <h2>Emina</h2>
+                    <p>Brand Emina terkenal sebagai salah satu brand kecantikan favorit remaja Indonesia. Dengan harganya yang terjangkau dan juga packaging yang manis, tak heran bahwa brand ini berhasil masuk ke dalam top 10 brand skincare lokal. 
 
-                        Skincare yang fokus untuk memperbaiki skin barrier ini sukses memenangi hati pencinta skincare Tanah Air dibuktikan dengan tujuh penghargaan bergengsi yang berhasil diraih dalam kurun waktu satu tahun.
-                        
-                        Penghargaan tersebut di antaranya “Moisturizer Terbaik” oleh Female Daily, Sociolla, Beautyhaul & TikTok Live Awards 2022. 
-                        
-                        Tak hanya itu, pada tahun yang sama, Sociolla & TikTok Live Awards menobatkan Skintific sebagai “Brand Pendatang Baru Terbaik 2022”.
-                        
-                        Skintific juga terkenal dengan inovasi produk mereka yang viral, yaitu 5x Ceramide Moisturizer dan yang terbaru Mugwort Acne Clay Stick dan Truffle Biome Skin Reborn Moisturizer. Produk-produk tersebut membawa Skintific menjadi TOP 1 Beauty Category hampir di seluruh e-commerce di Indonesia seperti Shopee, Tokopedia, dan platform lainnya. Bahkan, produk tersebut meraih penjualan terbesar di Tiktok Shop pada 2022.</p>
-            </div>
-            <div class="product">
-                    <img src="glowlixir-essence.jpg" alt="The Originote">
-                    <h2>The Originote</h2>
-                    <p>Beberapa waktu lalu, The Originote Moisturizer menjadi perbincangan hangat di berbagai media sosial, termasuk TikTok, di mana banyak pengguna berbagi ulasan dan pengalaman mereka dengan produk kecantikan ini.
+                        Terdata bahwa penjualan brand Emina di marketplace telah mencapai Rp7.4 miliar selama kuartal II – 2022. Brand skincare lokal telah menghadirkan berbagai produk skincare mulai dari face wash, moisturizer, toner, dan lainnya,Emina terus berinovasi untuk memenuhi kebutuhan perawatan kulit para remaja Indonesia.
 
-                        The Originote adalah salah satu brand lokal yang menawarkan produk skincare dengan harga yang terjangkau, memperhatikan orang-orang dengan budget terbatas. Meskipun demikian, produk ini mampu menarik perhatian karena kualitasnya yang baik dan efektifitasnya dalam merawat kulit.
-                        
-                        Sebagai tambahan, produk-produk dari The Originote tidak hanya terjangkau secara finansial, tetapi juga menawarkan solusi yang efektif untuk berbagai masalah kulit yang umum dialami oleh banyak orang.</p>
-            </div>
-            <div class="product">
-                    <img src="glowlixir-essence.jpg" alt="Dear Me Beauty">
-                    <h2>GDear Me Beauty</h2>
-                    <p>Dear Me Beauty adalah brand kecantikan lokal yang telah hadir sejak November 2017. Dengan visi yang kuat untuk menginspirasi setiap wanita Indonesia agar percaya diri dengan kecantikan unik mereka sendiri, brand ini telah menarik perhatian dalam industri kecantikan.
+                        Kehadiran Emina tidak hanya sebagai sebuah brand kecantikan, tetapi juga sebagai bagian dari gaya hidup dan ekspresi diri para remaja. Dengan produk-produk yang dapat diandalkan dan terjangkau, Emina tetap menjadi pilihan utama bagi mereka yang mengutamakan perawatan kulit yang efektif dan menyenangkan.</p>
+                </div>
+                <div class="product">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj6WlVXUgZ52TPQKzsuUAbM9iUbpittxHEQHuxxGEMj7XwyoFCT3nf8lr_g9yzG8wx6Ej4nz7EJIjfyoB2ZCyO5egRLYnH9fA15GL5_9YQnlOuw2JbdkKfSB1gOnP1-_jdXbrVKBj9UDNgBhZqk7nHdQKumuTPX4Ds3AtR1zbc0PshVQwSXIXhXAo_JfOmH/s1200/Skintific%205X%20Ceramide%20Barrier%20Moisturizer%20Gel.jpeg" alt="Skintific">
+                        <h2>Skintific</h2>
+                        <p>Skintific, merek produk perawatan kulit (skincare) yang memperkenalkan produk mereka di akhir 2021 untuk masuk menjadi salah satu merek papan atas di Indonesia dan termasuk salah satu yang banyak dicari.
 
-                        Produk-produk dari Dear Me Beauty tidak hanya menekankan pada penampilan luar, tetapi juga memperhatikan keamanan dan kualitasnya. Setiap produk telah melewati uji keamanan dan memiliki sertifikasi halal, sehingga dapat dipercaya oleh para konsumen.
-                        
-                        Tidak hanya itu, Dear Me Beauty juga berhasil mengikuti tren kecantikan saat ini dengan menawarkan produk yang sesuai dengan kebutuhan dan preferensi pasar yang terus berkembang. Dengan demikian, brand ini tidak hanya menginspirasi kepercayaan diri, tetapi juga menjadi pilihan yang relevan dan sesuai dengan tren di kalangan penggemar kecantikan.</p>
-            </div>
-            <div class="product">
-                    <img src="glowlixir-essence.jpg" alt="Whitelab">
-                    <h2>Whitelab</h2>
-                     <p>Whitelab, sebuah brand perawatan kulit lokal yang muncul pada tahun 2020, telah menjadi sorotan di kalangan masyarakat Indonesia. Keberhasilannya terbukti dari popularitas produk-produknya yang seringkali laris di pasaran dan sulit ditemukan karena cepat habis terjual. Rahasianya terletak pada penggunaan bahan-bahan unggulan berkualitas tinggi yang dikombinasikan dengan formulasi yang efektif. Tidak hanya itu, Whitelab juga memperhatikan kantong konsumen dengan menawarkan harga yang terjangkau, menjadikannya pilihan yang menarik bagi berbagai kalangan. Dengan demikian, brand ini tidak hanya mengikuti tren, tetapi juga membentuknya dengan menyediakan solusi perawatan kulit yang berkualitas dan terjangkau bagi masyarakat Indonesia.</p>
+                            Skincare yang fokus untuk memperbaiki skin barrier ini sukses memenangi hati pencinta skincare Tanah Air dibuktikan dengan tujuh penghargaan bergengsi yang berhasil diraih dalam kurun waktu satu tahun.
+                            
+                            Penghargaan tersebut di antaranya “Moisturizer Terbaik” oleh Female Daily, Sociolla, Beautyhaul & TikTok Live Awards 2022. 
+                            
+                            Tak hanya itu, pada tahun yang sama, Sociolla & TikTok Live Awards menobatkan Skintific sebagai “Brand Pendatang Baru Terbaik 2022”.
+                            
+                            Skintific juga terkenal dengan inovasi produk mereka yang viral, yaitu 5x Ceramide Moisturizer dan yang terbaru Mugwort Acne Clay Stick dan Truffle Biome Skin Reborn Moisturizer. Produk-produk tersebut membawa Skintific menjadi TOP 1 Beauty Category hampir di seluruh e-commerce di Indonesia seperti Shopee, Tokopedia, dan platform lainnya. Bahkan, produk tersebut meraih penjualan terbesar di Tiktok Shop pada 2022.</p>
+                </div>
+                <div class="product">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRRIuZDCOTlDSspW5HFMwuuYe7ZoxUJ7s4m-KDOvib3LGP5nwVvaOKy3uSaPhPP5A9i-opGJKtCbPwmVr8NV5NpcRsmjDLPh11d3XCHTbPH-aupIKY5wOyDpAQveg55-ra_elSunJHzJtBgSboMhSFSvXFBtGA9jZpd433NA-xbo_kr_vncIQ57KrrgjAt/s1200/868f6b8c-3cc1-4901-b93e-e9991505caf3.jpg" alt="The Originote">
+                        <h2>The Originote</h2>
+                        <p>Beberapa waktu lalu, The Originote Moisturizer menjadi perbincangan hangat di berbagai media sosial, termasuk TikTok, di mana banyak pengguna berbagi ulasan dan pengalaman mereka dengan produk kecantikan ini.
+
+                            The Originote adalah salah satu brand lokal yang menawarkan produk skincare dengan harga yang terjangkau, memperhatikan orang-orang dengan budget terbatas. Meskipun demikian, produk ini mampu menarik perhatian karena kualitasnya yang baik dan efektifitasnya dalam merawat kulit.
+                            
+                            Sebagai tambahan, produk-produk dari The Originote tidak hanya terjangkau secara finansial, tetapi juga menawarkan solusi yang efektif untuk berbagai masalah kulit yang umum dialami oleh banyak orang.</p>
+                </div>
+                <div class="product">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFPvIIZG1KCWM0Wr8D9CZDSkqedcTgV8iHcFMLgZnCnLfa28-yK2U6pdVYosX92pb5sXYsG74NMT-aGkxEDwq47DsG5L5tRHrtVGKx_X91jrE3ESbwyFNGmz1IJ-PnKUdfdshzi8zz4AwmLTtkuAmeMg6_4OrFlG2KxBpbfrBUka3csryPn1zstWJsVBVQ/s1200/045406500_1665060712-TT_09980.webp" alt="Dear Me Beauty">
+                        <h2>GDear Me Beauty</h2>
+                        <p>Dear Me Beauty adalah brand kecantikan lokal yang telah hadir sejak November 2017. Dengan visi yang kuat untuk menginspirasi setiap wanita Indonesia agar percaya diri dengan kecantikan unik mereka sendiri, brand ini telah menarik perhatian dalam industri kecantikan.
+
+                            Produk-produk dari Dear Me Beauty tidak hanya menekankan pada penampilan luar, tetapi juga memperhatikan keamanan dan kualitasnya. Setiap produk telah melewati uji keamanan dan memiliki sertifikasi halal, sehingga dapat dipercaya oleh para konsumen.
+                            
+                            Tidak hanya itu, Dear Me Beauty juga berhasil mengikuti tren kecantikan saat ini dengan menawarkan produk yang sesuai dengan kebutuhan dan preferensi pasar yang terus berkembang. Dengan demikian, brand ini tidak hanya menginspirasi kepercayaan diri, tetapi juga menjadi pilihan yang relevan dan sesuai dengan tren di kalangan penggemar kecantikan.</p>
+                </div>
+                <div class="product">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdJw5idJiA5wcpJU2lXovq1TM4WJshUAN1MQQCdMH2JJ1iMpIoo1hMWfZCpo94TxQ4PHKHPBnDHhqZO18xmIMnuy8edXg4YJD64aSbHolcpVjWbUAELZ4im4iuvZiRLgAFik9NzgXBq04mWEUUT3cOm-OvTKQk9ggurXfDaaPFR9c5wL3yzDiZv2z3vK6E/s1200/53fe2b26134cfc66c6770a41a915698e.jpg" alt="Whitelab">
+                        <h2>Whitelab</h2>
+                        <p>Whitelab, sebuah brand perawatan kulit lokal yang muncul pada tahun 2020, telah menjadi sorotan di kalangan masyarakat Indonesia. Keberhasilannya terbukti dari popularitas produk-produknya yang seringkali laris di pasaran dan sulit ditemukan karena cepat habis terjual. Rahasianya terletak pada penggunaan bahan-bahan unggulan berkualitas tinggi yang dikombinasikan dengan formulasi yang efektif. Tidak hanya itu, Whitelab juga memperhatikan kantong konsumen dengan menawarkan harga yang terjangkau, menjadikannya pilihan yang menarik bagi berbagai kalangan. Dengan demikian, brand ini tidak hanya mengikuti tren, tetapi juga membentuknya dengan menyediakan solusi perawatan kulit yang berkualitas dan terjangkau bagi masyarakat Indonesia.</p>
 
 
-        <p>Jangan ragu untuk mencoba produk-produk ini dan rasakan manfaatnya untuk kulit Anda. Tetap konsisten dalam perawatan kulit untuk hasil yang optimal!</p>
-        <a href="/blog/article2/">Kembali ke Artikel</a>
-    </div>
+            <p>Jangan ragu untuk mencoba produk-produk ini dan rasakan manfaatnya untuk kulit Anda. Tetap konsisten dalam perawatan kulit untuk hasil yang optimal!</p>
+            <a href="http://127.0.0.1:8000/blog/">Kembali ke Artikel</a>
+            
+        </div>
         
-
-    <div class="footer">
-        <!-- Footer content -->
-    </div>
-</body>
-</html>
+        <footer class="footer">
+            &copy; 2024 AFSKIN - Hak Cipta oleh Afni Kaulan Sadida
+        </footer>
+    </body>
+    </html>
