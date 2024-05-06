@@ -3,192 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article 3 - Rahasia Kulit Sehat</title>
+    <title>Home - AFSKIN</title>
     <style>
-        /* Global styles */
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
+            background-size: cover;
+            background-color: #eeb9d7;
+            color: #333; /* Dark text color for better contrast */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1 {
+
+        .header {
+            background-color: #de7bb3; /* Pink background */
+            padding: 20px 50px;
             text-align: center;
-            color: #333;
         }
-        p {
-            color: #555;
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        /* Article specific styles */
-        .tips-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+
+        .logo {
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            text-decoration: none;
         }
-        .tip {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        .navigation {
+            display: flex;
+            gap: 50px;
         }
-        .tip h2 {
-            color: #de7bb3;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
+
+        .navigation a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 20px; /* Increase font size */
+            
         }
-        .tip p {
-            color: #777;
+
+        .navigation a:hover {
+            color: #ffffff; /* Lighter pink on hover */
         }
+
+        .navigation a.active {
+            color: #ffffff; /* Change color for active menu item */
+        }
+
         .footer {
-                background-color: #de7bb3;
-                text-align: center;
-                color: #ffffff;
-                padding: 20px;
-                width: 100%;
-                clear: both; /* Clear floats */
-            }
-            /* Styles for header */
-            .blog-header {
-                background-color: #de7bb3; /* Pink background */
-                padding: 20px 50px;
-                text-align: center;
-                margin-bottom: 20px; /* Add margin bottom for spacing */
-            }
+            background-color: #de7bb3;
+            text-align: center;
+            color: #ffffff;
+            padding: 20px;
+            width: 100%;
+        }
 
-            .blog-header .container {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
+        /* Style for content */
+        .content {
+            padding: 40px 20px; /* Padding atas dan bawah 40px, sisi kiri dan kanan 20px */
+            max-width: 800px; /* Menetapkan lebar maksimum konten */
+            margin: 20px auto; /* Membuat konten berada di tengah dengan margin atas dan bawah 20px */
+            text-align: justify; /* Ratakan teks */
+            background-color: rgba(255, 255, 255, 0.8); /* Menambahkan latar belakang semi-transparan */
+            border-radius: 20px; /* Memutar sudut konten */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
+        }
 
-            .blog-header .logo {
-                color: #ffffff;
-                font-size: 40px; /* Font size same as Home */
-                font-weight: bold;
-                text-decoration: none;
-                font-family: Arial, sans-serif; /* Use the same font as Home */
-            }
+        .content h2 {
+            color: #5e5b5b; /* Warna judul */
+            text-align: center; /* Tengahkan judul */
+            margin-bottom: 20px; /* Menambahkan margin bawah 20px pada judul */
+        }
 
-            .blog-header .navigation {
-                display: flex;
-                gap: 50px; /* Gap same as Home */
-            }
+        .content p {
+            line-height: 1.6; /* Menetapkan tinggi baris untuk paragraf */
+            margin-bottom: 15px; /* Menambahkan margin bawah 15px pada paragraf */
+        }
 
-            .blog-header .navigation a {
-                color: #fff;
-                text-decoration: none;
-                transition: color 0.3s;
-                font-size: 20px; /* Font size same as Home */
-                font-family: Arial, sans-serif; /* Use the same font as Home */
-            }
+        .content ol {
+            padding-left: 20px; /* Menambahkan padding kiri 20px pada daftar terurut */
+        }
 
-            .blog-header .navigation a:hover {
-                color: #ffffff; /* Lighter pink on hover */
-            }
+        .content ol li {
+            margin-bottom: 10px; /* Menambahkan margin bawah 10px pada setiap item daftar terurut */
+        }
 
-            .blog-header .navigation a.active {
-                color: #ffffff; /* Change color for active menu item */
-            }
+        .content ol li strong {
+            display: block; /* Menjadikan teks kuat sebagai blok */
+            margin-bottom: 5px; /* Menambahkan margin bawah 5px pada teks kuat */
+        }
+        
+        /* Style for search box */
+        .search-box {
+            position: relative;
+        }
 
-            .blog-header .search-box {
-                margin-right: 20px;
-                position: relative;
-            }
+        .search-box input[type="text"] {
+            width: 200px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
 
-            .blog-header .search-box input[type="text"] {
-                width: 200px;
-                padding: 10px;
-                border: none;
-                border-radius: 5px;
-                outline: none;
-                font-size: 16px; /* Font size same as Home */
-                font-family: Arial, sans-serif; /* Use the same font as Home */
-            }
+        .search-box button {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            padding: 10px;
+            border: none;
+            background-color: #c7b1be;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-            .blog-header .search-box button {
-                position: absolute;
-                top: 50%;
-                right: 0;
-                transform: translateY(-50%);
-                padding: 10px;
-                border: none;
-                background-color: #c7b1be;
-                color: #fff;
-                border-radius: 5px;
-                cursor: pointer;
-                transition: background-color 0.3s;
-            }
-
-            .blog-header .search-box button:hover {
-                background-color: #c6609e;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="blog-header">
-            <div class="container">
-                <a href="#" class="logo">AFSKIN</a>
-                <!-- Navbar -->
-                <nav class="navigation">
-                    <a href="/">Home</a>
-                    <a href="/blog/" class="active">Blog</a>
-                    <a href="/about/">About</a>
-                    <a href="/product/">Product</a>
-                    <a href="/contact/">Contact</a>
-                </nav>
-                <!-- Search box -->
-                <div class="search-box">
-                    <input type="text" placeholder="Search...">
-                    <button type="submit">Search</button>
-                </div>
-            </div>
-        </div>
-
+        .search-box button:hover {
+            background-color: #c6609e;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Rahasia Kulit Sehat</h1>
-        <div class="tips-container">
-            <div class="tip">
-                <h2>Rajin Membersihkan Wajah</h2>
-                <p>Membersihkan wajah dua kali sehari membantu menghilangkan kotoran, minyak, dan sisa makeup yang dapat menyumbat pori-pori.</p>
-            </div>
-            <div class="tip">
-                <h2>Menggunakan Pelembap</h2>
-                <p>Menggunakan pelembap setelah membersihkan wajah membantu menjaga kelembapan kulit dan mencegah kekeringan.</p>
-            </div>
-            <div class="tip">
-                <h2>Melindungi Kulit dari Sinar Matahari</h2>
-                <p>Menggunakan tabir surya setiap hari membantu melindungi kulit dari kerusakan akibat paparan sinar UV yang berlebihan.</p>
-            </div>
-            <div class="tip">
-                <h2>Makan Makanan Sehat</h2>
-                <p>Konsumsi makanan yang kaya akan antioksidan, vitamin, dan mineral membantu menjaga kesehatan kulit dari dalam.</p>
-            </div>
-            <div class="tip">
-                <h2>Minum Air Putih Cukup</h2>
-                <p>Memastikan tubuh terhidrasi dengan cukup air membantu menjaga kelembapan kulit dan membantu dalam proses detoksifikasi.</p>
-            </div>
-            <div class="tip">
-                <h2>Istirahat yang Cukup</h2>
-                <p>Istirahat yang cukup membantu kulit dalam proses regenerasi dan memperbaiki kerusakan sel-sel kulit.</p>
+    <div class="header">
+        <div class="container">
+            <a href="#" class="logo">AFSKIN</a>
+            <!-- Navbar -->
+            <nav class="navigation">
+                <a href="#" class="active">Home</a>
+                <a href="/blog/">Blog</a>
+                <a href="/about/">About</a>
+                <a href="/product/">Product</a>
+                <a href="/contact/">Contact</a>
+            </nav>
+            <!-- Search box -->
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
             </div>
         </div>
-        <p>Menjaga kulit sehat membutuhkan perawatan yang konsisten dan pemahaman akan kebutuhan kulit Anda. Dengan menerapkan tips-tips di atas, Anda dapat mencapai kulit yang sehat dan bercahaya.</p>
-        <a href="/blog/article3/">Kembali ke Article</a>
     </div>
-</div>
 
-    <footer class="footer">
+    <!-- Content about healthy skin -->
+    <div class="content">
+        <h2>Fakta Menarik tentang Kulit wajah dan perawatannya</h2>
+        <p>Kulit yang sehat tidak hanya membuat Anda terlihat cantik, tetapi juga merupakan cerminan dari kesehatan tubuh secara keseluruhan. Berikut adalah beberapa rahasia untuk merawat kulit Anda dengan baik:</p>
+        <ol>
+            <li><strong>Rutin Membersihkan Kulit:</strong> Membersihkan kulit secara teratur adalah langkah penting untuk menghilangkan kotoran, minyak, dan debu yang dapat menyumbat pori-pori dan menyebabkan masalah kulit.</li>
+            <li><strong>Gunakan Produk Sesuai Jenis Kulit:</strong> Setiap orang memiliki jenis kulit yang berbeda, jadi penting untuk menggunakan produk perawatan kulit yang sesuai dengan jenis kulit Anda. Produk yang cocok untuk kulit kering mungkin tidak cocok untuk kulit berminyak.</li>
+            <li><strong>Hidrasi yang Cukup:</strong> Pastikan untuk minum air yang cukup setiap hari dan menggunakan pelembap kulit untuk menjaga kulit tetap terhidrasi. Kulit yang terhidrasi dengan baik akan terlihat lebih sehat dan bersinar.</li>
+            <li><strong>Lindungi Kulit dari Paparan Matahari:</strong> Sinar matahari dapat merusak kulit dan menyebabkan penuaan dini serta meningkatkan risiko kanker kulit. Gunakan tabir surya setiap hari, hindari paparan matahari secara berlebihan, dan kenakan pakaian pelindung saat berada di luar ruangan.</li>
+            <li><strong>Makanan Sehat untuk Kulit:</strong> Makanan yang Anda konsumsi dapat memengaruhi kondisi kulit Anda. Konsumsilah makanan yang kaya akan antioksidan, vitamin, dan mineral untuk menjaga kulit tetap sehat dan bercahaya.</li>
+            <li><strong>Rutin Olahraga:</strong> Olahraga secara teratur dapat meningkatkan aliran darah ke kulit, yang membantu menyuplai nutrisi ke sel-sel kulit dan mempercepat proses regenerasi kulit.</li>
+            <li><strong>Minimalkan Stres:</strong> Stres dapat memengaruhi kondisi kulit Anda. Temukan cara untuk mengelola stres, seperti meditasi, yoga, atau melakukan hobi yang Anda nikmati.</li>
+        </ol>
+        <p>Dengan mengikuti tips di atas dan merawat kulit Anda dengan baik, Anda dapat mencapai kulit yang sehat, bersinar, dan terlihat awet muda.</p>
+    </div>
+
+    <div class="footer">
         &copy; 2024 AFSKIN - Hak Cipta oleh Afni Kaulan Sadida
-    </footer>
+    </div>
 </body>
 </html>
-
