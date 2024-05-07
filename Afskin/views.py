@@ -14,6 +14,11 @@ def blog(request):
     blogs = Blog.objects.filter(status=1).order_by('-published_date')
     return render(request, 'blog.html', {'blogs': blogs})
 
+def about(request):
+    abouts = about.objects.filter(status=1).order_by('-published_date')
+    return render(request, 'about.html', {'abouts': abouts})
+
+
 def article1(request):
     return render(request, 'article1.html')
 

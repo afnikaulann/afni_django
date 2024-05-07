@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikel 1 - Tips Perawatan Kulit Sehari-hari</title>
+    <style>
+        body {
+                font-family: Arial, sans-serif;
+                background-size: cover;
+                background-color: #fffafd;
+                color: #333; /* Dark text color for better contrast */
+        }
+        .header {
+            background-color: #de7bb3; /* Pink background */
+            padding: 20px 50px;
+            text-align: center;
+            color: #ffffff; /* White text color */
+        }
+        .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+        }
+        .logo {
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navigation {
+            display: flex;
+            gap: 50px;
+        }
+        .navigation a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 20px; /* Increase font size */
+        }
+        .navigation a:hover {
+            color: #ffffff; /* Lighter pink on hover */
+        }
+        .navigation a.active {
+            color: #ffffff; /* Change color for active menu item */
+        }
+        .search-box {
+            margin-right: 20px; /* Add margin-right */
+            position: relative;
+        }
+        .search-box input[type="text"] {
+            width: 200px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px; /* Font size same as Home */
+            font-family: Arial, sans-serif; /* Use the same font as Home */
+        }
+        .search-box button {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            padding: 10px;
+            border: none;
+            background-color: #c7b1be;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .search-box button:hover {
+            background-color: #c6609e;
+        }
+        .article-content {
+            width: 80%;
+            margin: 20px auto;  
+        }
+        .article-content h1 {
+            color: #fd2fa4;
+            font-size: 30x;
+            text-align: center;
+            font-family: Arial, sans-serif;
+
+        }
+        /* Gaya teks pada elemen <strong> */
+        .article-content strong {
+            color: #de7bb3; /* Warna teks */
+            font-weight: bold; /* Ketebalan teks */
+        }
+
+        /* Gaya teks pada elemen <li> */
+        .article-content li {
+            margin-bottom: 10px; /* Jarak antar elemen <li> */
+            font-size: 16px; /* Ukuran teks */
+            line-height: 1.6; /* Jarak antar baris */
+        }
+
+        /* Gaya body */
+        body {
+            background-color: #f4f4f4; /* Warna latar belakang */
+            padding: 20px; /* Padding untuk menjaga jarak konten dari pinggiran */
+        }
+        /* Gaya teks pada elemen <strong> */
+        .article-content strong {
+            color: #de7bb3; /* Warna teks */
+            font-weight: bold; /* Ketebalan teks */
+}
+
+        /* Gaya teks pada elemen <li> */
+        .article-content li {
+            margin-bottom: 10px; /* Jarak antar elemen <li> */
+            font-size: 16px; /* Ukuran teks */
+            line-height: 1.6; /* Jarak antar baris */
+}
+
+        /* Gaya body */
+        body {
+            background-color: #ffffff; /* Warna latar belakang */
+            padding: 20px; /* Padding untuk menjaga jarak konten dari pinggiran */
+}
+
+        /* Additional styles for the article */
+        .article-content {
+            max-width: 800px; /* Set max-width for content */
+            margin: 0 auto; /* Center content */
+            padding: 20px; /* Add padding for spacing */
+        }
+
+        .article-content h1 {
+            color: #de7bb3; /* Pink color */
+            text-align: center; /* Center the heading */
+        }
+
+        .article-content p {
+            color: #555; /* Dark gray color */
+            line-height: 1.6; /* Increase line height for readability */
+        }
+
+        .article-content a {
+            text-decoration: none;
+            color: #de7bb3;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .article-content a:hover {
+            color: #a7a7a7;
+        }
+
+        .footer {
+                background-color: #de7bb3;
+                text-align: center;
+                color: #ffffff;
+                padding: 20px;
+                width: 100%;
+                clear: both; /* Clear floats */
+            }
+            /* Styles for header */
+            .blog-header {
+                background-color: #de7bb3; /* Pink background */
+                padding: 20px 50px;
+                text-align: center;
+                margin-bottom: 20px; /* Add margin bottom for spacing */
+            }
+
+            .blog-header .container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .blog-header .logo {
+                color: #ffffff;
+                font-size: 40px; /* Font size same as Home */
+                font-weight: bold;
+                text-decoration: none;
+                font-family: Arial, sans-serif; /* Use the same font as Home */
+            }
+
+            .blog-header .navigation {
+                display: flex;
+                gap: 50px; /* Gap same as Home */
+            }
+
+            .blog-header .navigation a {
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s;
+                font-size: 20px; /* Font size same as Home */
+                font-family: Arial, sans-serif; /* Use the same font as Home */
+            }
+
+            .blog-header .navigation a:hover {
+                color: #ffffff; /* Lighter pink on hover */
+            }
+
+            .blog-header .navigation a.active {
+                color: #ffffff; /* Change color for active menu item */
+            }
+
+            .blog-header .search-box {
+                margin-right: 20px;
+                position: relative;
+            }
+
+            .blog-header .search-box input[type="text"] {
+                width: 200px;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                outline: none;
+                font-size: 16px; /* Font size same as Home */
+                font-family: Arial, sans-serif; /* Use the same font as Home */
+            }
+
+            .blog-header .search-box button {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                padding: 10px;
+                border: none;
+                background-color: #c7b1be;
+                color: #fff;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+            .blog-header .search-box button:hover {
+                background-color: #c6609e;
+            }
+        </style>
+   </head>
+   <body>
+       <div class="blog-header">
+           <div class="container">
+               <a href="#" class="logo">AFSKIN</a>
+               <!-- Navbar -->
+               <nav class="navigation">
+                   <a href="/">Home</a>
+                   <a href="/blog/" class="active">Blog</a>
+                   <a href="/about/">About</a>
+                   <a href="/product/">Product</a>
+                   <a href="/contact/">Contact</a>
+               </nav>
+               <!-- Search box -->
+               <div class="search-box">
+                   <input type="text" placeholder="Search...">
+                   <button type="submit">Search</button>
+               </div>
+           </div>
+       </div>
+     <div class="article-content">
+        <h1>Manfaat Menggunakan Skincare untuk Jaga Kesehatan Kulit,Kini dan Nanti</h1>
+        <p>Demi mendapatkan kulit wajah yang sehat dan terhindari dari berbagai masalah kulit, tentunya tidak bisa diperoleh dengan begitu saja. Diperlukan usaha yang terus menerus dilakukan agar kulit tetap terjaga.
+
+
+
+            Memakai skincare menjadi salah satu cara yang bisa dilakukan untuk mewujudkannya. Meski terlihat banyak dan ribet tapi pemakaian skincare sangatlah penting dimulai sejak dini. Coba yuk simak apa saja manfaat skincare bagi kesehatan kulit kini dan nanti berikut ini.</p>
+        <ul>
+            <li><strong>Menjauhi Dari Masalah Kulit:</strong> Fungsi skincare yang pertama adalah membantu kulit terhindari dari berbagai masalah kulit seperti kulit kering, berminyak, komedo, berjerawat, breakout, noda hitam, dan lain sebagainya. Meski masalah-masalah tersebut bisa ditutupi oleh make-up, tapi ini hanya bisa bertahan sebentar.
+
+                Meski tidak instan seperti make-up, pemakaian skincare yang rutin dan dilakukan dengan benar, bisa membantu mengatasi berbagai sumber masalah-masalah di kulit..</li>
+            <li><strong>Menutrisi Kulit:</strong>Mengingat banyaknya faktor yang dapat membuat kulit wajah mengalami masalah, seperti paparan udara kotor, asap rokok, dan sinar matahari, penting untuk merawatnya dengan baik setelah seharian beraktivitas di luar rumah. Skincare tidak hanya membantu membersihkan kulit, tetapi juga memberikan nutrisi penting yang membuatnya terlihat lebih sehat dan terawat. Berbagai kandungan seperti AHA-BHA untuk mencerahkan, hyaluronic acid untuk melembapkan, vitamin C untuk melawan radikal bebas, dan kolagen untuk mengencangkan kulit, menjadikan skincare sangat bermanfaat bagi kesehatan kulit dalam jangka panjang.</li>
+            <li><strong>Membuat Hasil Make-Up Makin Sempurna</strong>Salah satu manfaat yang dapat dirasakan dari penggunaan skincare adalah kulit yang terasa halus dan mulus. Efek ini sangat bermanfaat saat Anda menggunakan make-up, karena kulit yang sehat, halus, dan lembut akan memberikan hasil make-up yang lebih maksimal. Dengan kulit yang terawat dengan baik, make-up akan tampak lebih rata dan menyatu dengan kulit, menciptakan tampilan yang lebih natural dan menawan. Sehingga, penggunaan skincare tidak hanya membantu dalam perawatan kulit secara keseluruhan, tetapi juga meningkatkan hasil estetika saat menggunakan make-up.</li>
+            <li><strong>MMenunda Penuaan Pada Kulit</strong> Penggunaan skincare tidak hanya memberikan manfaat dalam menjaga kesehatan kulit, tetapi juga memiliki peran penting dalam menunda proses penuaan dini. Ketika seseorang memasuki usia yang lebih tua, kulitnya cenderung mengalami perubahan yang signifikan karena produksi kolagen dalam tubuh mulai menurun. Kolagen ini bertanggung jawab untuk menjaga elastisitas kulit, sehingga kulit terlihat lebih kencang, lembut, dan muda.
+
+                Dengan menggunakan produk skincare secara teratur, kita dapat melawan berbagai tanda-tanda penuaan dini yang disebabkan oleh faktor-faktor tersebut. Perawatan kulit yang konsisten dapat membantu menjaga kulit tetap sehat, segar, dan terlihat lebih muda dalam jangka waktu yang lebih lama. Oleh karena itu, skincare bukan hanya tentang menjaga penampilan kulit secara luar, tetapi juga memberikan perlindungan dan perawatan yang lebih dalam untuk menjaga kesehatan kulit secara keseluruhan.</li>
+            <li><strong>Mengatasi Masalah Kulit Tertentu:</strong> Beragam produk skincare dirancang untuk mengatasi masalah kulit seperti jerawat, kemerahan, dan sensitivitas, memberikan solusi yang sesuai dengan kebutuhan kulit Anda.</li>
+            <li><strong>Meningkatkan Kesehatan Kulit:</strong> Skincare tidak hanya merawat kulit dari luar, tetapi juga memberikan nutrisi penting untuk kesehatan kulit secara keseluruhan, meningkatkan regenerasi sel-sel kulit dan meningkatkan tekstur serta kecerahan kulit.</li>
+        </ul>
+        <p>Dengan menggunakan skincare secara teratur, Anda dapat merasakan manfaat yang signifikan bagi kesehatan dan penampilan kulit Anda. Jadikan perawatan kulit sebagai bagian penting dari rutinitas kecantikan Anda untuk hasil yang optimal dan kulit yang sehat!</p>
+        <a href="http://127.0.0.1:8000/blog/">Kembali ke Artikel</a>
+    </div>
+
+    <footer class="footer">
+        &copy; 2024 AFSKIN - Hak Cipta oleh Afni Kaulan Sadida
+    </footer>
+</body>
+</html>
