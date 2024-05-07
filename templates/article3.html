@@ -3,54 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artikel 1 - Tips Perawatan Kulit Sehari-hari</title>
+    <title>Article 2 - AFSKIN</title>
     <style>
-         body {
-                font-family: Arial, sans-serif;
-                background-size: cover;
-                background-color: #fffafd;
-                color: #333; /* Dark text color for better contrast */
+        /* Your existing CSS styles... */
+
+        /* Additional styles for Article 2 */
+        .article-content {
+            max-width: 800px; /* Set max-width for content */
+            margin: 0 auto; /* Center content */
+            padding: 20px; /* Add padding for spacing */
         }
-        .header {
+
+        .article-content h1 {
+            color: #de7bb3; /* Pink color */
+        }
+
+        .article-content p {
+            color: #555; /* Dark gray color */
+        }
+
+        .article-content a {
+            text-decoration: none;
+            color: #de7bb3;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .article-content a:hover {
+            color: #a7a7a7;
+        }
+        h1 {
+            text-align: center;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        /* CSS untuk gambar dengan latar belakang */
+        .product img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 0px;
+            background-image: url('URL_GAMBAR_YANG_DISALIN_DARI_GOOGLE');
+            background-size: cover; /* Sesuaikan ukuran gambar */
+            background-position: center; /* Posisikan gambar ke tengah */
+            width: 100%; /* Sesuaikan lebar gambar */
+            height: 350px; /* Sesuaikan tinggi gambar */
+        }
+        article img {
+            max-width: 320px; /* Memastikan gambar tidak melebihi lebar konten */
+            height: auto; /* Memastikan rasio aspek gambar dipertahankan */
+            margin-bottom: 10px; /* Memberikan jarak di bawah gambar */
+        }
+        .footer {
+            background-color: #de7bb3;
+            text-align: center;
+            color: #ffffff;
+            padding: 20px;
+            width: 100%;
+            clear: both; /* Clear floats */
+        } /* Styles for header */
+        .blog-header {
             background-color: #de7bb3; /* Pink background */
             padding: 20px 50px;
             text-align: center;
-            color: #ffffff; /* White text color */
+            margin-bottom: 20px; /* Add margin bottom for spacing */
         }
-        .container {
-                max-width: 1200px;
-                margin: 0 auto;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
+
+        .blog-header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        .logo {
+
+        .blog-header .logo {
             color: #ffffff;
-            font-size: 40px;
+            font-size: 40px; /* Font size same as Home */
             font-weight: bold;
             text-decoration: none;
+            font-family: Arial, sans-serif; /* Use the same font as Home */
         }
-        .navigation {
+
+        .blog-header .navigation {
             display: flex;
-            gap: 50px;
+            gap: 50px; /* Gap same as Home */
         }
-        .navigation a {
+
+        .blog-header .navigation a {
             color: #fff;
             text-decoration: none;
             transition: color 0.3s;
-            font-size: 20px; /* Increase font size */
+            font-size: 20px; /* Font size same as Home */
+            font-family: Arial, sans-serif; /* Use the same font as Home */
         }
-        .navigation a:hover {
+
+        .blog-header .navigation a:hover {
             color: #ffffff; /* Lighter pink on hover */
         }
-        .navigation a.active {
+
+        .blog-header .navigation a.active {
             color: #ffffff; /* Change color for active menu item */
         }
-        .search-box {
-            margin-right: 20px; /* Add margin-right */
+
+        .blog-header .search-box {
+            margin-right: 20px;
             position: relative;
         }
-        .search-box input[type="text"] {
+
+        .blog-header .search-box input[type="text"] {
             width: 200px;
             padding: 10px;
             border: none;
@@ -59,7 +134,8 @@
             font-size: 16px; /* Font size same as Home */
             font-family: Arial, sans-serif; /* Use the same font as Home */
         }
-        .search-box button {
+
+        .blog-header .search-box button {
             position: absolute;
             top: 50%;
             right: 0;
@@ -72,100 +148,71 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
-        .search-box button:hover {
+
+        .blog-header .search-box button:hover {
             background-color: #c6609e;
         }
-        .article-content {
-            width: 80%;
-            margin: 20px auto;  
-       
-        }
-        /* Gaya teks pada elemen <strong> */
-        .article-content strong {
-            color: #de7bb3; /* Warna teks */
-            font-weight: bold; /* Ketebalan teks */
-        }
+         .article-content p {
+        color: #000000;
+        font-size: 18px;
+        line-height: 1.5;
+        font-family: 'Roboto', sans-serif;
+    }
 
-        /* Gaya teks pada elemen <li> */
-        .article-content li {
-            margin-bottom: 10px; /* Jarak antar elemen <li> */
-            font-size: 16px; /* Ukuran teks */
-            line-height: 1.6; /* Jarak antar baris */
-        }
+    .article-content a {
+        color: #de7bb3; /* Warna tautan */
+        text-decoration: none; /* Hapus garis bawah default pada tautan */
+        font-weight: bold; /* Tambahkan ketebalan pada teks tautan */
+        transition: color 0.3s; /* Animasi perubahan warna */
+    }
 
-        /* Gaya body */
-        body {
-            background-color: #f4f4f4; /* Warna latar belakang */
-            padding: 20px; /* Padding untuk menjaga jarak konten dari pinggiran */
-        }
-        /* Gaya teks pada elemen <strong> */
-        .article-content strong {
-            color: #de7bb3; /* Warna teks */
-            font-weight: bold; /* Ketebalan teks */
+    .article-content a:hover {
+         color: #c6609e; /* Warna tautan saat dihover */
+}
+    .footer {
+        background-color: #de7bb3;
+        text-align: center;
+        color: #ffffff;
+        padding: 20px;
+        clear: both;
+        width: 100%;
+        margin-top: 20px; /* Add margin top */
+    }
+    .content img {
+        display: block; /* Jadikan gambar sebagai blok agar dapat diberikan margin */
+        margin: auto; /* Posisikan gambar ke tengah secara horizontal */
+        max-width: 100%; /* Maksimalkan lebar gambar agar sesuai dengan lebar konten */
+        height: auto; /* Biarkan tinggi gambar menyesuaikan proporsinya */
+        border-radius: 10px; /* Tambahkan border-radius agar sudut gambar menjadi melengkung */
+        text-align: justify;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk efek visual */   
+    }
+    /* Gaya teks pada elemen <strong> */
+    .article-content strong {
+        color: #de7bb3; /* Warna teks */
+        font-weight: bold; /* Ketebalan teks */
 }
 
-        /* Gaya teks pada elemen <li> */
-        .article-content li {
-            margin-bottom: 10px; /* Jarak antar elemen <li> */
-            font-size: 16px; /* Ukuran teks */
-            line-height: 1.6; /* Jarak antar baris */
-}
-
-        /* Gaya body */
-        body {
-            background-color: #ffffff; /* Warna latar belakang */
-            padding: 20px; /* Padding untuk menjaga jarak konten dari pinggiran */
-}
-
-        .article-content p {
-            color: #000000;
-            font-size: 18px;
-            line-height: 1.5;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .article-content a {
-            color: #de7bb3; /* Warna tautan */
-            text-decoration: none; /* Hapus garis bawah default pada tautan */
-            font-weight: bold; /* Tambahkan ketebalan pada teks tautan */
-            transition: color 0.3s; /* Animasi perubahan warna */
-        }
-
-        .article-content a:hover {
-             color: #c6609e; /* Warna tautan saat dihover */
-}
-        .footer {
-            background-color: #de7bb3;
-            text-align: center;
-            color: #ffffff;
-            padding: 20px;
-            clear: both;
-            width: 100%;
-            margin-top: 20px; /* Add margin top */
-        }
-        .content img {
-            display: block; /* Jadikan gambar sebagai blok agar dapat diberikan margin */
-            margin: auto; /* Posisikan gambar ke tengah secara horizontal */
-            max-width: 100%; /* Maksimalkan lebar gambar agar sesuai dengan lebar konten */
-            height: auto; /* Biarkan tinggi gambar menyesuaikan proporsinya */
-            border-radius: 10px; /* Tambahkan border-radius agar sudut gambar menjadi melengkung */
-            text-align: justify;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk efek visual */   
-        }
+    /* Gaya teks pada elemen <li> */
+    .article-content li {
+        margin-bottom: 10px; /* Jarak antar elemen <li> */
+        font-size: 17px; /* Ukuran teks */
+        line-height: 1.6; /* Jarak antar baris */
+        
     </style>
 </head>
 <body>
-    <div class="header">
+    <div class="blog-header">
         <div class="container">
             <a href="#" class="logo">AFSKIN</a>
             <!-- Navbar -->
             <nav class="navigation">
-                <a href="/" class="active">Home</a>
-                <a href="/blog/">Blog</a>
+                <a href="/">Home</a>
+                <a href="/blog/" class="active">Blog</a>
                 <a href="/about/">About</a>
                 <a href="/product/">Product</a>
                 <a href="/contact/">Contact</a>
-            </nav> 
+            </nav>
             <!-- Search box -->
             <div class="search-box">
                 <input type="text" placeholder="Search...">
@@ -173,71 +220,41 @@
             </div>
         </div>
     </div>
+        <div class="article-content">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj81rzeX0OW_Cg2ECeOO7gVcsMVJ6lsI0FnNORGDzwRgSpKq7_TK4ZIxDadHs5XmO4VxKb-c-oWM8lKooP20kh22N5rSwzOFcT2usWBhRg9nrObA290XaeSMB9AEiSozDgIYn07OkfEIKpCPTQ_MJZp1Bfc1e-gSYOWoMQIre3Tp5D2Qrixipvldso6SM7x/s1200/FAKTA%20DAN%20MITOS%20SEPUTA%20(1).png" alt="Deskripsi Gambar" style="height: 400px; width:850px;">
+    <p>
+        Meskipun hati-hati dalam merawat wajah sangat penting, namun hal ini tidak boleh membuat kita menjadi acuh tak acuh atau lalai dalam merawat kulit kita. Sebaliknya, penting untuk tetap aktif dalam merawat wajah, tetapi dengan pengetahuan yang cukup tentang apa yang tepat dan yang tidak.
 
-    <div class="article-content">
-    	<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj81rzeX0OW_Cg2ECeOO7gVcsMVJ6lsI0FnNORGDzwRgSpKq7_TK4ZIxDadHs5XmO4VxKb-c-oWM8lKooP20kh22N5rSwzOFcT2usWBhRg9nrObA290XaeSMB9AEiSozDgIYn07OkfEIKpCPTQ_MJZp1Bfc1e-gSYOWoMQIre3Tp5D2Qrixipvldso6SM7x/s1200/FAKTA%20DAN%20MITOS%20SEPUTA%20(1).png" alt="Deskripsi Gambar" style="height: auto; width: 1000px;">
-        <p>
-            Merawat kulit adalah salah satu hal yang penting untuk kesehatan dan penampilan kamu. Berikut adalah beberapa tips perawatan kulit sehari-hari yang bisa kamu terapkan:
-        </p>
-        <ol>
-            <li>
-                <strong>Wajah yang Ketarik Setelah Cuci Muka Menandakan Kulit Bersih</strong><br>
-                Rutin membersihkan wajah dan tubuh bukan hanya membantu menghilangkan kotoran dan minyak, tetapi juga meningkatkan sirkulasi darah dan mempersiapkan kulit untuk menyerap nutrisi dari produk perawatan kulit yang Anda gunakan selanjutnya. Pilihlah pembersih wajah yang lembut dan sesuai dengan jenis kulit kamu. Hindari penggunaan produk yang mengandung bahan kimia keras seperti sulfat atau paraben, yang dapat menyebabkan iritasi dan mengganggu keseimbangan alami kulit.
-                Namun, penting untuk memilih pembersih wajah dan tubuh yang tepat sesuai dengan jenis kulit kamu. Pembersih yang lembut akan membersihkan tanpa mengiritasi atau mengganggu keseimbangan alami kulit kamu. Hindari produk yang mengandung bahan kimia keras seperti sulfat atau paraben, karena dapat menyebabkan iritasi dan bahkan mengganggu keseimbangan pH kulit, yang dapat menyebabkan masalah kulit lebih lanjut. Dengan memilih produk yang tepat, Anda tidak hanya membersihkan kulit dengan lembut, tetapi juga memberikan dasar yang sehat untuk perawatan kulit yang efektif dan berkelanjutan.
-            </li>
-            <li>
-                <strong>Gunakan Pelembap Sesuai Jenis Kulit</strong><br>
-                Pelembap tidak hanya memberikan kelembapan, tetapi juga membantu mengunci kelembapan dan menghaluskan tekstur kulit. Pilihlah produk yang mengandung bahan-bahan alami seperti shea butter, minyak jojoba, atau ceramide, yang membantu menjaga kulit tetap lembap dan kenyal. Penting juga untuk mengaplikasikan pelembap setelah mandi atau mencuci wajah, ketika kulit masih lembap, untuk mengunci kelembapan.
-                Ketika memilih pelembap, perhatikanlah produk yang mengandung bahan-bahan alami yang terkenal akan kemampuannya dalam melembapkan dan merawat kulit. Shea butter, misalnya, dikenal karena kemampuannya untuk menutrisi dan melembapkan kulit secara mendalam. Minyak jojoba adalah bahan lain yang efektif dalam menjaga kelembapan kulit dan mencegah kekeringan. Sedangkan ceramide, yang merupakan komponen alami dari lapisan pelindung kulit, membantu menjaga kelembapan alami kulit dan meningkatkan elastisitasnya.
+        Untuk menghindari kesalahan dan kebingungan, penting bagi kita untuk memahami perbedaan antara mitos dan fakta tentang perawatan wajah. Dengan memahami hal ini, kita bisa membuat keputusan yang lebih cerdas dan efektif dalam merawat kulit kita, tanpa mengorbankan kesehatan dan kecantikan wajah kita.
+    </p>
+    <ol>
+        <li>
+            <strong>Wajah yang Ketarik Setelah Cuci Muka Menandakan Kulit Bersih</strong><br>
+            Rutin membersihkan wajah dan tubuh bukan hanya membantu menghilangkan kotoran dan minyak, tetapi juga meningkatkan sirkulasi darah dan mempersiapkan kulit untuk menyerap nutrisi dari produk perawatan kulit yang kamu
+             gunakan selanjutnya. Pilihlah pembersih wajah yang lembut dan sesuai dengan jenis kulit kamu. Hindari penggunaan produk yang mengandung bahan kimia keras seperti sulfat atau paraben, yang dapat menyebabkan iritasi dan mengganggu keseimbangan alami kulit.
+            Namun, penting untuk memilih pembersih wajah dan tubuh yang tepat sesuai dengan jenis kulit kamu. Pembersih yang lembut akan membersihkan tanpa mengiritasi atau mengganggu keseimbangan alami kulit kamu. Hindari produk yang mengandung bahan kimia keras seperti sulfat atau paraben, karena dapat menyebabkan iritasi dan bahkan mengganggu keseimbangan pH kulit, yang dapat menyebabkan masalah kulit lebih lanjut. Dengan memilih produk yang tepat, Anda tidak hanya membersihkan kulit dengan lembut, tetapi juga memberikan dasar yang sehat untuk perawatan kulit yang efektif dan berkelanjutan.
+        </li>
+        <li>
+            <strong>Semakin Mahal Harga Produknya, Semakin Bagus Efeknya
+            </strong><br>
+            Ini dia mitos yang paling tidak masuk akal namun banyak dipercayai orang: bahwa efektivitas facial foam ditentukan oleh merk, tempat pembelian, dan harga produk, bukan dari komposisi kandungan kimianya, girls. Kebanyakan orang percaya bahwa dengan membeli produk perawatan wajah yang mahal, hasilnya akan lebih baik, tetapi kenyataannya seringkali tidak terlihat perbedaannya, dan ini bisa menyebabkan penyesalan karena sudah mengeluarkan uang banyak.
 
-Penting untuk diingat bahwa cara kamu mengaplikasikan pelembap juga berpengaruh pada efektivitasnya. Mengaplikasikan pelembap setelah mandi atau mencuci wajah, ketika kulit masih lembap, memungkinkan pelembap untuk menangkap dan mengunci kelembapan dengan lebih baik. Dengan demikian, rutinitas penggunaan pelembap yang tepat akan membantu menjaga kulit kamu tetap lembap, kenyal, dan sehat secara keseluruhan.
-
-            </li>
-            <li>
-                <strong> Lindungi Kulit dari Sinar Matahari</strong><br>
-                
-Perlindungan dari sinar UV merupakan langkah krusial dalam merawat kulit dan mencegah penuaan dini yang disebabkan oleh paparan sinar matahari. Menggunakan tabir surya setiap hari bukan hanya sekadar langkah pencegahan, tetapi juga merupakan investasi dalam kesehatan kulit jangka panjang kamu. Sinar UV dapat merusak kolagen dan elastin kulit, yang dapat menyebabkan keriput, garis halus, dan kehilangan kekenyalan.
+        </li>
+        <li>
+            <strong> Tidak Boleh Sering Cuci Muka, Nanti Kulit Jadi Kering</strong><br>
+            
+            Dianjurkan untuk mencuci muka dua kali sehari, dan ini memang bukan tanpa alasan. Terlalu sering mencuci muka bisa mengurangi minyak alami di wajah kita, yang pada akhirnya dapat menyebabkan kulit menjadi kering. Namun, ada pengecualian untuk remaja yang aktif dan sering beraktivitas di luar ruangan. Bagi mereka, sering mencuci muka sepanjang hari juga diperbolehkan. Hal ini penting untuk menjaga kulit wajah tetap bersih dari debu dan polusi yang dapat menempel di pori-pori wajah akibat aktivitas di luar ruangan. Meskipun demikian, perlu diingat bahwa pemilihan produk pembersih yang lembut dan sesuai dengan jenis kulit juga sangat penting dalam menjaga keseimbangan minyak alami dan kelembapan kulit
 penting untuk menghindari berada di bawah sinar matahari langsung pada saat puncak intensitasnya, yaitu antara pukul 10 pagi hingga 4 sore. Jika kamu harus berada di luar ruangan selama periode ini, pertimbangkan untuk menggunakan sunscreen untuk melinduni kulit kamu.
-            <li>
-                <strong>Hindari Sentuhan Berlebihan</strong><br>
-                makanan yang kita pilih untuk dikonsumsi memiliki dampak yang signifikan pada kesehatan kulit kita. Buah-buahan serta sayuran yang kaya akan antioksidan, seperti vitamin C dan vitamin E, memiliki peran penting dalam menangkal radikal bebas yang dapat merusak struktur kulit. Konsumsi rutin makanan-makanan ini dapat membantu menjaga kulit tetap segar, terhidrasi, dan bercahaya.
-                Namun, tidak hanya soal apa yang kita konsumsi, tetapi juga bagaimana kita merawat kulit kita secara keseluruhan. Salah satu hal yang sering diabaikan adalah kebiasaan sering menyentuh wajah. Tanpa disadari, tangan kita mengandung banyak kuman dan kotoran yang dapat dengan mudah ditransfer ke wajah, meningkatkan risiko infeksi dan iritasi kulit. Oleh karena itu, penting untuk menghindari kebiasaan tersebut agar kulit tetap bersih dan sehat.
-            </li>
-            <li>
-                <strong>Perhatikan Periode Kedaluwarsa Produk</strong><br>
-                Memperhatikan periode kedaluwarsa produk juga sangat penting dalam menjaga kesehatan kulit. Kulit yang terhidrasi dengan baik memiliki kelembapan alami yang meningkatkan elastisitasnya dan membuatnya terlihat lebih muda. Pastikan untuk minum air putih secara teratur sepanjang hari untuk menjaga kelembapan kulit Anda dari dalam. Selain air putih, konsumsi juga minuman lain yang dapat membantu meningkatkan hidrasi, seperti infused water, teh hijau, atau jus buah-buahan segar.
+        <li>
+            <strong>Masih Remaja Tidak Melakukan Perawatan Wajahn</strong><br>
+            Banyak yang beranggapan bahwa melakukan perawatan wajah belum sesuai dengan usia remaja, namun sebenarnya tidak ada batasan umur yang pasti dalam melakukan perawatan kulit. Terlebih lagi, pada masa remaja ketika tubuh mengalami masa pubertas, perawatan wajah menjadi sangat penting. Pada masa ini, fluktuasi hormon dapat menyebabkan munculnya jerawat dan masalah kulit lainnya. Sangatlah penting untuk mengatasi jerawat dengan cepat dan efektif, bukan mengabaikannya karena takut.
 
-Tetapi ingat, saat memilih produk-produk perawatan kulit, perhatikanlah tanggal kedaluwarsa mereka. Menggunakan produk yang sudah kadaluarsa dapat mengurangi efektivitasnya dan bahkan berpotensi menyebabkan iritasi atau masalah kulit lainnya. Jadi, selalu periksa tanggal kedaluwarsa sebelum menggunakan produk perawatan kulit Anda untuk hasil yang optimal dan menjaga kesehatan kulit Anda.
-            </li>
-            <li>
-                <strong>Lakukan Uji Patch</strong><br>
-                Selain memberikan waktu bagi kulit untuk meregenerasi dirinya sendiri, tidur yang cukup juga memiliki dampak besar pada kesehatan kulit secara keseluruhan. Tidur yang cukup membantu mengurangi munculnya lingkaran hitam di sekitar mata, yang sering kali disebabkan oleh kurangnya istirahat yang memadai. Selain itu, tidur yang berkualitas juga membantu menjaga kulit tetap segar dan bercahaya, karena sel-sel kulit memiliki kesempatan untuk pulih dan memperbarui diri selama periode istirahat ini.
+            Ketika jerawat muncul, sering kali kita cenderung mengabaikannya karena rasa malu atau ketidakpercayaan diri. Namun, hal ini dapat menyebabkan masalah kulit semakin parah. Oleh karena itu, melakukan perawatan wajah yang tepat sangatlah penting, terlepas dari usia. Ini termasuk kebiasaan mencuci muka secara teratur, menggunakan produk perawatan kulit yang sesuai dengan jenis kulit, dan berkonsultasi dengan ahli perawatan kulit jika diperlukan.
+<a href="http://127.0.0.1:8000/blog/">Kembali ke Artikel</a>
+</div>
 
-Cobalah untuk menciptakan lingkungan tidur yang nyaman dan tenang di dalam kamar tidur Anda. Hal ini termasuk memilih kasur dan bantal yang nyaman, menjaga suhu ruangan yang optimal, dan menciptakan suasana yang tenang dan relaks sebelum tidur. Hindari kebisingan dan gangguan yang dapat mengganggu tidur Anda, seperti lampu terlalu terang atau suara yang keras.
-            </li>
-            <li>
-                <strong>Gunakan Masker Wajah Secara Rutin</strong><br>
-                
-
-                Gunakan masker wajah secara rutin untuk memberikan perawatan tambahan yang diperlukan oleh kulit Anda. Masker wajah dapat menjadi langkah penting dalam rutinitas perawatan kulit Anda, karena mereka memiliki kemampuan untuk menyediakan nutrisi tambahan, menargetkan masalah khusus kulit, dan meningkatkan kondisi kulit secara keseluruhan.
-
-                Saat memilih masker wajah, penting untuk mempertimbangkan kebutuhan khusus kulit Anda. Apakah Anda menginginkan hidrasi tambahan untuk kulit kering, pengurangan minyak berlebih untuk kulit berminyak, atau pengencangan kulit untuk mengurangi tanda-tanda penuaan, ada banyak jenis masker yang tersedia untuk memenuhi kebutuhan Anda.
-            </li>
-            <li>
-                <strong>Jaga Konsistensi</strong><br>
-                Untuk meraih hasil yang optimal dalam perawatan kulit, konsistensi sangatlah penting. Dengan melakukan rutinitas perawatan kulit setiap hari, kamu dapat memastikan bahwa kulit Anda tetap sehat dan terawat. Meskipun mungkin terasa menggoda untuk melewatkan langkah-langkah perawatan saat merasa malas atau sibuk, tetaplah disiplin dan lakukan perawatan secara teratur. Selain itu, hindari mencoba-coba produk secara bergantian, karena hal ini bisa mengganggu keseimbangan kulit Anda.
-            </li>
-        </ol>
-        <p>
-            Dengan menerapkan tips-tips di atas secara konsisten, kamu dapat menjaga kulit tetap sehat dan terawat. Jangan lupa untuk selalu memperhatikan kebutuhan kulit kamu dan berkonsultasi dengan ahli dermatologi jika diperlukan.
-        </p>
-        <p>
-            Ingin tahu lebih banyak tentang perawatan kulit? Terus ikuti artikel-artikel kami di <a href="/blog/">Artikel lainnya</a>.
-        </p>
-    </div>
-
-    <footer class="footer">
-        &copy; 2024 AFSKIN - Hak Cipta oleh Afni Kaulan Sadida
-    </footer>
+<footer class="footer">
+    &copy; 2024 AFSKIN - Hak Cipta oleh Afni Kaulan Sadida
+</footer>
 </body>
 </html>
