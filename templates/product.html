@@ -3,70 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product - AFSKIN</title>
+    <title>Home - AFSKIN</title>
     <style>
-        /* CSS Styling for Product Page */
-        /* Your existing CSS styles... */
-
-        /* Additional styles for Product Page */
-        .product-header {
+        body {
+            font-family: Arial, sans-serif;
+            background-size: cover;
+            background-color: #eeb9d7;
+            color: #333; /* Dark text color for better contrast */
+        }
+        .header {
             background-color: #de7bb3; /* Pink background */
             padding: 20px 50px;
             text-align: center;
-            margin-bottom: 20px; /* Add margin bottom for spacing */
         }
-
-        .product-header .container {
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
-
-        .product-header .logo {
+        .logo {
             color: #ffffff;
-            font-size: 40px; /* Font size same as Home */
+            font-size: 40px;
             font-weight: bold;
             text-decoration: none;
-            font-family: Arial, sans-serif; /* Use the same font as Home */
         }
-
-        .product-header .navigation {
+        .navigation {
             display: flex;
-            gap: 50px; /* Gap same as Home */
+            gap: 50px;
         }
-
-        .product-header .navigation a {
+        .navigation a {
             color: #fff;
             text-decoration: none;
             transition: color 0.3s;
-            font-size: 20px; /* Font size same as Home */
-            font-family: Arial, sans-serif; /* Use the same font as Home */
+            font-size: 20px; /* Increase font size */
         }
-
-        .product-header .navigation a:hover {
+        .navigation a:hover {
             color: #ffffff; /* Lighter pink on hover */
         }
-
-        .product-header .navigation a.active {
+        .navigation a.active {
             color: #ffffff; /* Change color for active menu item */
         }
-
-        .product-header .search-box {
+        .footer {
+            background-color: #de7bb3;
+            text-align: center;
+            color: #ffffff;
+            padding: 20px;
+            clear: both;
+            width: 100%;
+		}
+        /* Style for search box */
+        .search-box {
             margin-right: 20px;
             position: relative;
         }
-
-        .product-header .search-box input[type="text"] {
+        .search-box input[type="text"] {
             width: 200px;
             padding: 10px;
             border: none;
             border-radius: 5px;
             outline: none;
-            font-size: 16px; /* Font size same as Home */
-            font-family: Arial, sans-serif; /* Use the same font as Home */
         }
-
-        .product-header .search-box button {
+        .search-box button {
             position: absolute;
             top: 50%;
             right: 0;
@@ -79,22 +78,23 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
-
-        .product-header .search-box button:hover {
+        .search-box button:hover {
             background-color: #c6609e;
         }
     </style>
 </head>
 <body>
-    <div class="product-header">
+    <div class="header">
         <div class="container">
-            <a href="#" class="logo">AFSKIN</a>
+            <a href="#" class="logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhC0J6qzzP6mcZz_Xi-ukm3z2GbnXMrQKR4dbzYFqy_D2fVe-fz7xBuaPZiAWokuzwsuEvQVRF4JraFPkZAJ22QR5qUk72RvBUgd_92RHSZUTTrCxbymkjFDwtW9z_t5f9I5B9BPTb20DVz48oDKJeoeh21Zwlr950IGzsW8mBZ7yMImZ3W-aiLqMeraKx5/s1200/Black_And_White_Typography_Y2K_Style_Street_Wear_Logo__2_-removebg-preview.png" alt="Logo" style="height: 50px; width: auto;">
+            </a>
             <!-- Navbar -->
             <nav class="navigation">
-                <a href="/">Home</a>
+                <a href="/#/" class="active">Home</a>
                 <a href="/blog/">Blog</a>
                 <a href="/about/">About</a>
-                <a href="/product/" class="active">Product</a>
+                <a href="/product/">Product</a>
                 <a href="/contact/">Contact</a>
             </nav>
             <!-- Search box -->
@@ -104,6 +104,10 @@
             </div>
         </div>
     </div>
-    <!-- Your existing content for product page... -->
 </body>
 </html>
+
+
+
+
+		

@@ -8,7 +8,7 @@ def home(request):
 
 def product(request):
     products = Product.objects.all()  # Mengubah categories menjadi products
-    return render(request, 'product_list.html', {'products': products})
+    return render(request, 'product.html', {'products': products})
 
 def blog(request):
     blogs = Blog.objects.filter(status=1).order_by('-published_date')
@@ -40,3 +40,6 @@ def post_detail(request, slug):
 def page_detail(request, slug):
     page = get_object_or_404(Page, slug=slug)
     return render(request, 'page_detail.html', {'page': page})
+
+def contact(request):
+    return render(request, 'contact.html', {'contact': contact})

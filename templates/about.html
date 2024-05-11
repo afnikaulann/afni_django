@@ -53,6 +53,7 @@
             padding: 20px;
             clear: both;
             width: 100%;
+            margin-top: 50px; /* Margin atas footer */
         }
         /* Style for search box */
         .search-box {
@@ -94,28 +95,46 @@
             font-size: 18px;
             line-height: 1.6;
             margin-top: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            text-align: justify;
         }
-        .footer {
-            background-color: #de7bb3;
-            text-align: center;
-            color: #fff;
-            padding: 20px;
+        .content-container {
+            max-width: 1100px;
+            margin: 0 auto;
             margin-top: 50px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row; /* Menyusun item secara horizontal */
+            align-items: center; /* Memastikan item selalu berada di tengah secara vertikal */
+            justify-content: center; /* Memastikan item selalu berada di tengah secara horizontal */
+            margin-bottom: 50px; /* Margin bawah kontainer */
         }
-        .container img {
-            max-width: 100%;
+        .content-container img {
+            max-width: 50%; /* Gambar memakan setengah lebar kontainer */
             height: auto;
-            display: grid;
-            grid-template-columns: auto auto;
-            gap: 50px;
+            margin-right: 20px; /* Spasi antara gambar dan teks */
+            border-radius: 10px; /* Memuluskan sudut gambar */
         }
         p {
             font-size: 18px;
             line-height: 1.5;
-            gap: 50px;
+            text-align: justify;
+            max-width: 50%; /* Teks memakan setengah lebar kontainer */
+            color: #555; /* Warna teks */
+        }
+        .personal-photo {
+            max-width: 300px; /* Lebar maksimum foto pribadi */
+            display: block;
+            margin: 0 auto; /* Posisi tengah */
+            border-radius: 10px; /* Memuluskan sudut foto pribadi */
+            margin-top: 20px; /* Spasi antara foto pribadi dan konten */
+        }
+        .personal-text {
+            text-align: center;
+            font-size: 16px;
+            margin-top: 10px;
+            color: #777; /* Warna teks */
         }
     </style>
 </head>
@@ -140,29 +159,24 @@
             </div>
         </div>
     </div>
-</body>
-</html>
 
-        <div class="title">
-        </div>
-        <div class="content">
-            <div class="container">
+    <div class="content-container">
         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwp9kYzzswsnGyXuhPfZfKWytsElSgyQYE_TNv9sg8GvGUrcGUn_PaJUnIjay-iXusRoh-aJaoJTJ6ZkTdrUMIgLt4C3lfeRffpLvvzZm__eqEaMyr-kicpoLKfMZvlZjG6zrEt1bSIPVFWlzA7Jr6zPMOeEEZe24oA4Tp0Wo4ZN266gWQd0lstjexWl3u/s1200/inilah-6-urutan-memakai-skincare-yang-benar.jpg" alt="AFSKIN Product" />
-        <div>
-            <p>
-                Where beauty meets innovation. Our mission is to revolutionize skincare with cutting-edge technology and natural ingredients. We believe that skincare should not only enhance your appearance but also promote overall well-being.
-            </p>
-            <p>At AFSKIN, we take pride in our commitment to sustainability. Our products are cruelty-free and environmentally friendly, ensuring that your beauty routine aligns with your values.</p>
-            <p>Explore our range of skincare solutions crafted with care and backed by science. From gentle cleansers to luxurious serums, we have everything you need to nourish your skin and unleash your inner glow.</p>
-            <p>Join us on our journey to redefine beauty standards and embrace authenticity. Together, let's celebrate diversity and empower individuals to embrace their unique beauty.</p>
-        </div>
+        <p>
+            Dengan bangga kami perkenalkan Afskin, sebuah destinasi terkemuka dalam dunia perawatan kulit yang telah diinisiasi dengan semangat inovatif oleh pendirinya, Afni Kaulan Sadida. Melalui kesempurnaan dan komitmen kami terhadap kecantikan yang personal dan efektif, kami membuka pintu bagi Anda untuk menjelajahi dunia perawatan kulit yang tak tertandingi. Dengan tips perawatan kulit yang terperinci dan pengetahuan mendalam tentang produk-produk terbaik serta teknologi perawatan terkini, Afskin memberikan Anda akses eksklusif untuk meraih kulit sehat dan bersinar. Ayo temukan kecantikan Anda di Afskin!
+        </p>
+    </div>
+
+    <!-- Teks di atas foto personal -->
+    <div class="Founder">
+        <p style="font-size: 30px; color: #000000;  text-align: center;">Founder:</p>
+    </div>
+
+    <!-- Foto Pribadi -->
+    <img class="personal-photo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimcuxBH-7VU2pc87j-Qnxx_PFHBcBbTB096HinHkgLPsML6IfQ6NOWy1RBPwtPltQBRJdhcdbenXqj7tZW0Mkzy6xTTMdkoLhRzj_E2EMHi7WVV0nJB9Gda4qVXTD7CNoLt_e4FwUE2yZHbs_-A14I5_BVvOSmWG5j9Bjhf8Rya3qs20x62M6SLEjaYf8d/s1200/WhatsApp%20Image%202024-03-19%20at%2010.44.09%20(1).jpeg" alt="Your Personal Photo">
+
+    <div class="footer">
+        &copy; 2024 AFSKIN - Hak Cipta oleh Afni Kaulan Sadida
     </div>
 </body>
 </html>
-
-            
-
-
-
-
-       
