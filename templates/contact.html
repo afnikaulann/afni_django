@@ -8,7 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             background-size: cover;
-            background-color: #eeb9d7;
+            background-color: #ffffff;
             color: #333; /* Dark text color for better contrast */
         }
         .header {
@@ -53,6 +53,17 @@
             clear: both;
             width: 100%;
 		}
+        /* Style for main content container */
+        .main-content {
+            max-width: 1200px;
+            margin: 20px auto; /* Added margin-top and margin-bottom for spacing */
+            display: flex;
+            flex-direction: column; /* Set the container to column layout */
+            align-items: center;
+            background: linear-gradient(to bottom, #fbc6d8, #ffffff); /* Gradient effect memanjang ke bawah */
+            padding: 30px; /* Padding agar konten tidak terlalu dekat dengan tepi */
+            border-radius: 10px; /* Bulatkan sudut kontainer */
+        }
         /* Style for search box */
         .search-box {
             margin-right: 20px;
@@ -81,6 +92,40 @@
         .search-box button:hover {
             background-color: #c6609e;
         }
+        /* Style for contact container */
+        .contact-container {
+            width: 600px; /* Lebar kotak kontak */
+            max-width: 100%; /* Lebar maksimum sesuai dengan lebar layar */
+            margin: 20px auto; /* Added margin-top and margin-bottom for spacing */
+            background:  #fbc6d8; /* White background */
+            padding: 30px; /* Padding agar konten tidak terlalu dekat dengan tepi */
+            border-radius: 10px; /* Bulatkan sudut kontainer */
+        }
+        .contact-container h2 {
+            color: #000000; /* Pink color for headings */
+        }
+        .contact-container ul {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0;
+        }
+        .contact-container ul li {
+            margin-bottom: 10px; /* Spacing between list items */
+        }
+        /* Style for Share Your Experience container */
+        .experience-container {
+            width: 600px; /* Lebar kotak "Share Your Experience" */
+            max-width: 100%; /* Lebar maksimum sesuai dengan lebar layar */
+            margin: 20px auto; /* Added margin-top and margin-bottom for spacing */
+            background:  #fbc6d8; /* White background */
+            padding: 30px; /* Padding agar konten tidak terlalu dekat dengan tepi */
+            border-radius: 10px; /* Bulatkan sudut kontainer */
+        }
+        .experience-container h2 {
+            color: #000000; /* Pink color for headings */
+        }
+        .experience-container p {
+            margin-bottom: 20px; /* Spacing between paragraphs */
+        }
     </style>
 </head>
 <body>
@@ -104,10 +149,42 @@
             </div>
         </div>
     </div>
+
+    <div class="main-content">
+        <h1>Contact Us</h1>
+        <p>Do you need help or want to provide feedback? Don't hesitate to contact us via the available communication channels!</p>
+        <form action="/submit_contact_form" method="POST">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+            <button type="submit">Send Message</button>
+        </form>
+        
+        <div class="experience-container"style="text-align: center; font-size: 1.1em;"> <!-- Menengahkan dan memperbesar bagian -->
+            <h2>Share Your Experience</h2>
+            <form action="/submit_experience" method="POST">
+                <label for="experience">Your Experience:</label><br>
+                <textarea id="experience" name="experience" rows="4" required></textarea><br>
+                <button type="submit">Share</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="contact-container"style="text-align: center; font-size: 1.1em;"> <!-- Menengahkan dan memperbesar bagian -->
+        <h2>Contact Information</h2>
+        <p>Feel free to contact us using the following information:</p>
+        <ul>
+            <li>Email: kaulanafni@gmail.com</li>
+            <li>Phone: +62 85696525184</li>
+            <li>Address: Jln Teuku Umar 14,No 25 Makassar</li>
+        </ul>
+    </div>
+    
+    <footer class="footer">
+        &copy; 2024 AFSKIN - Hak Cipta oleh Afni Kaulan Sadida
+    </footer>
 </body>
 </html>
-
-
-
-
-		

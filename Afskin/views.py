@@ -43,3 +43,4 @@ def page_detail(request, slug):
 
 def contact(request):
     return render(request, 'contact.html', {'contact': contact})
+
