@@ -14,4 +14,5 @@ urlpatterns = [
     path('pages/', views.page_list, name='pages'),
     path('post/<slug:slug>/', views.post_detail, name='post'),
     path('page/<slug:slug>/', views.page_detail, name='page'),
+    path('product/skintypenormal/', views.skintypenormal, name='skintypenormal'),
 ]

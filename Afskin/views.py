@@ -44,3 +44,7 @@ def page_detail(request, slug):
 def contact(request):
     return render(request, 'contact.html', {'contact': contact})
 
+
+def skintypenormal(request):
+    return render(request, 'skintype normal.html')
+
